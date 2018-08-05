@@ -5,13 +5,17 @@
     
     <title>Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
+    <meta name="description" content="google-site-verification: googlebc8b7fe10d9595b3.html">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/googlebc8b7fe10d9595b3.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="google-site-verification: googlebc8b7fe10d9595b3.html">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-05T03:49:15.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="google-site-verification: googlebc8b7fe10d9595b3.html">
     
 
     
@@ -204,99 +208,15 @@
 </aside>
 
             
-            <section id="main">
-    <article id="post-java8-new-features" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/08/04/java8-new-features/">java8常用新特性</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/08/04/java8-new-features/">
-            <time datetime="2018-08-04T14:05:20.000Z" itemprop="datePublished">2018-08-04</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/java/">java</a>, <a class="tag-link" href="/tags/java8/">java8</a>
-    </div>
-
-                    </div>
-                
-            </header>
         
         
         <div class="article-entry" itemprop="articleBody">
         
             
-            <h2 id="函数式编程-lambda"><a href="#函数式编程-lambda" class="headerlink" title="函数式编程-lambda"></a>函数式编程-lambda</h2><blockquote>
-<ul>
-<li>本质上是匿名函数</li>
-<li>语法更简洁</li>
-</ul>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 8之前：</span></span><br><span class="line"><span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Before Java8, too much code for too little to do"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).start();</span><br><span class="line"></span><br><span class="line"><span class="comment">//Java 8方式：</span></span><br><span class="line"><span class="keyword">new</span> Thread( () -&gt; System.out.println(<span class="string">"In Java8, Lambda expression rocks !!"</span>) ).start();</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>格式</p>
-<ul>
-<li><p>无返回值</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">int</span> params) -&gt; &#123;your Code&#125;</span><br><span class="line"><span class="comment">// 一个参数的,可以不加小括号;代码块如果只有一行,大括号也不需要;参数类型不需要加</span></span><br><span class="line">params -&gt; your Code</span><br><span class="line">(params,params) -&gt; your Code</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>有返回值</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">params -&gt; your Code</span><br><span class="line"></span><br><span class="line">(params,params) -&gt; &#123;</span><br><span class="line">	your Code;</span><br><span class="line">	<span class="keyword">return</span> xxx;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>函数接口</p>
-<ul>
-<li>常用接口<ul>
-<li>Function&lt;T, R&gt;</li>
-<li>Consumer<t></t></li>
-<li>Supplier<t></t></li>
-<li>Predicate<t></t></li>
-</ul>
-</li>
-<li>FunctionalInterface注解</li>
-<li>自定义接口</li>
-</ul>
-</li>
-<li><p>捕获外部变量</p>
-</li>
-</ul>
-<blockquote>
-<p>捕获实例或静态变量是没有限制的(可认为是通过 final 类型的局部变量 this 来引用前两者) 捕获的局部变量必须显式的声明为 final 或实际效果的的 final 类型(编译器推断变量的“常量性”（finality）)</p>
-</blockquote>
-<p>例子见<code>com.iflytek.vbox.skill.platform.service.VboxProvinceSkillManagementService#provinceManagement</code></p>
-<ul>
-<li>集合中遍历、排序等</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">"1"</span>, <span class="string">"2"</span>, <span class="string">"3"</span>, <span class="string">"4"</span>, <span class="string">"5"</span>, <span class="string">"6"</span>);</span><br><span class="line">list.listIterator().forEachRemaining(s -&gt; System.out.println(s));</span><br><span class="line">list.listIterator().forEachRemaining(System.out::println);</span><br><span class="line">list.forEach(System.out::println);</span><br></pre></td></tr></table></figure>
-<ul>
-<li>双冒号</li>
-<li>检查异常</li>
-</ul>
-<h2 id="接口默认方法"><a href="#接口默认方法" class="headerlink" title="接口默认方法"></a>接口默认方法</h2><pre><code>- 继承
-- 
-</code></pre><h2 id="optional"><a href="#optional" class="headerlink" title="optional"></a>optional</h2><ul>
-<li><a href="https://www.jianshu.com/p/82ed16613072" target="_blank" rel="noopener">简书例子</a></li>
-</ul>
-
+            google-site-verification: googlebc8b7fe10d9595b3.html
         
         </div>
         <footer class="article-footer">
@@ -306,7 +226,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2018/08/04/java8-new-features/" data-id="cjkgbfm480006m1tomrpklw1g" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/googlebc8b7fe10d9595b3.html" data-id="cjkgbfm2e0000m1toldaukqrp" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -374,148 +294,28 @@
 
             
     
-        <a href="http://yoursite.com/2018/08/04/java8-new-features/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2018/08/04/java8-new-features/">Comments</a>
+        <a href="http://yoursite.com/googlebc8b7fe10d9595b3.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/googlebc8b7fe10d9595b3.html">Comments</a>
     
 
         </footer>
     </div>
     
-</article>
-
-
-
-    <article id="post-hexo-skill" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
         
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2018/08/04/hexo-skill/">技巧</a>
-        </h1>
-    
 
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/08/04/hexo-skill/">
-            <time datetime="2018-08-04T11:17:14.000Z" itemprop="datePublished">2018-08-04</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/hexo/">hexo</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h1 id="hexo技巧"><a href="#hexo技巧" class="headerlink" title="hexo技巧"></a>hexo技巧</h1><p><a href="https://hexo.io/zh-cn/docs/front-matter" target="_blank" rel="noopener">官方中文文档</a></p>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>source文件下为markdown文章,其中</p>
-<ul>
-<li>_drafts 为私密文章</li>
-<li>_posts 为正常的文章</li>
-</ul>
-<p>目录下可以自行建立文件夹<br></p>
-            <p class="article-more-link">
-                <a href="/2018/08/04/hexo-skill/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2018/08/04/hexo-skill/" data-id="cjkgbfm460004m1to1j17qp2e" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://yoursite.com/2018/08/04/hexo-skill/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2018/08/04/hexo-skill/">Comments</a>
-    
-
-        </footer>
-    </div>
     
 </article>
 
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
 
 </section>
             
@@ -639,11 +439,13 @@
     <script>
     var disqus_config = function () {
         
+            this.page.url = 'http://yoursite.com/googlebc8b7fe10d9595b3.html';
+        
         this.page.identifier = '';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/count.js';
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
