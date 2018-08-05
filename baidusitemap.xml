@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://blog.zull.cn/2018/08/05/hexo-sitemap/</loc>
+    <lastmod>2018-08-05T04:35:04.877Z</lastmod>
+    <data>
+        <display>
+        <title>搜索收录</title>
+        <pubTime>2018-08-05T04:02:29.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://blog.zull.cn/2018/08/04/hexo-skill/</loc>
+    <lastmod>2018-08-04T16:45:12.622Z</lastmod>
+    <data>
+        <display>
+        <title>技巧</title>
+        <pubTime>2018-08-04T11:17:14.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zull.cn/2018/08/04/java8-new-features/</loc>
+    <lastmod>2018-08-04T16:45:12.622Z</lastmod>
+    <data>
+        <display>
+        <title>java8常用新特性</title>
+        <pubTime>2018-08-04T14:05:20.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>java8</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
