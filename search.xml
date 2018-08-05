@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[(一)hexo搭建]]></title>
+    <url>%2Fhexo-build%2F</url>
+    <content type="text"><![CDATA[nodeJs环境 安装node 从官网地址下载稳定版,并安装 环境配置 如果node -v 不显示版本号,则需要配置环境变量 配置全局环境变量 vim .bash_profile 1PATH=$PATH:/usr/local/bin/ 安装使用 npm 安装 Hexo。 1sudo npm install -g hexo-cli 使用cd到路径后1hexo init 建立hexo项目,即可开始使用]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[针对java8的Optional进行增强 (OptionalPlus)]]></title>
+    <url>%2Fjava8-optional-plus%2F</url>
+    <content type="text"><![CDATA[&ensp; &ensp; 网上关于optional用法的文章有一大堆了,但都只是简单的说了下如何去使用,感觉和实际使用中情况差的蛮大的.&ensp; &ensp; 在最初尝试使用optional的时候感觉很迷茫,感觉这个东西作用不大啊,看了遍源码也无法理解意义何在.&ensp; &ensp; 然后强迫自己多使用了几次后,发现这个功能还是挺好用的,也慢慢理解了作者的意图.&ensp; &ensp; 但随着使用次数增多,发现optional在很多场景下根本无法满足自己的需要,写了一半只能删掉用常规的写法.&ensp; &ensp; 所以为了满足自己的需求,写了OptionalPlus来治愈自己的强迫症 optional简洁 optional-plus不同场景示例 判断对象是否为空,为空执行A操作,不为空执行B操作12345678910111213141516171819public P2cMessageData example()&#123; P2cMessageData data = new P2cMessageData(); OptionalPlus.ofNullable(getTokenAndSessionByDeviceId(data.getDeviceId())) .filter(DebuggingDeviceTokenAndSessionData::getIsReady) .filter(deviceTokenAndSessionData -&gt; deviceTokenAndSessionData.getSessionInfo() != null) .ifNotPresent(() -&gt; &#123; logger.info("无密钥,尝试重新获取密钥!") data.setDecryptedData("无密钥,尝试重新获取密钥!"); ServerConnectGlobal.refreshTokenAndSession(data.getDeviceId()); &#125;) .ifPresent(deviceTokenAndSessionData -&gt; &#123; String sessionKey = deviceTokenAndSessionData.getSessionInfo().getSessionKey(); String devicePinCipher = deviceTokenAndSessionData.getSessionInfo().getDevicePinCipher(); data.setDecryptedData(AesUtils.decrypt(data.getMessage().getData(), sessionKey, devicePinCipher)); &#125;); return data;&#125; 完整代码:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118public final class OptionalPlus&lt;T&gt; &#123; private final Optional&lt;T&gt; optional; private OptionalPlus(Optional&lt;T&gt; optional) &#123; this.optional = Objects.requireNonNull(optional); &#125; public static &lt;T&gt; OptionalPlus&lt;T&gt; empty() &#123; return new OptionalPlus&lt;&gt;(Optional.empty()); &#125; public static &lt;T&gt; OptionalPlus&lt;T&gt; of(T t) &#123; return new OptionalPlus&lt;&gt;(Optional.of(t)); &#125; public static &lt;T&gt; OptionalPlus&lt;T&gt; ofNullable(T t) &#123; return t == null ? empty() : of(t); &#125; public static &lt;T&gt; OptionalPlus&lt;T&gt; ofNullable(Optional&lt;T&gt; t) &#123; return t == null ? empty() : new OptionalPlus&lt;&gt;(t); &#125; /** * 获取optional对象,只保证optional不为null * * @return */ public Optional&lt;T&gt; getOptional() &#123; if (optional == null) &#123; throw new NoSuchElementException("No value present"); &#125; return optional; &#125; public T get() &#123; return getOptional().get(); &#125; public boolean isPresent() &#123; return optional.isPresent(); &#125; /** * 如果不为null,执行回调,并返回this * * @param consumer * @return */ public OptionalPlus&lt;T&gt; ifPresent(Consumer&lt;? super T&gt; consumer) &#123; optional.ifPresent(consumer); return this; &#125; public OptionalPlus&lt;T&gt; filter(Predicate&lt;? super T&gt; predicate) &#123; return optional.filter(predicate).isPresent() ? this : empty(); &#125; public &lt;U&gt; OptionalPlus&lt;U&gt; map(Function&lt;? super T, ? extends U&gt; mapper) &#123; return OptionalPlus.ofNullable(optional.map(mapper)); &#125; public T orElse(T other) &#123; return optional.orElse(other); &#125; public T orElseGet(Supplier&lt;? extends T&gt; other) &#123; return optional.orElseGet(other); &#125; public &lt;X extends Throwable&gt; T orElseThrow(Supplier&lt;? extends X&gt; exceptionSupplier) throws X &#123; return optional.orElseThrow(exceptionSupplier); &#125; /** * 如果对象为null,执行回调,并返回this * * @param noArgsFunction * @return */ public OptionalPlus&lt;T&gt; ifNotPresent(NoArgsFunction noArgsFunction) &#123; if (!isPresent()) &#123; noArgsFunction.todo(); &#125; return this; &#125; @Override public boolean equals(Object obj) &#123; if (this == obj) &#123; return true; &#125; if (!(obj instanceof OptionalPlus)) &#123; return false; &#125; OptionalPlus&lt;?&gt; other = (OptionalPlus&lt;?&gt;) obj; return Objects.equals(optional, other.getOptional()); &#125; @Override public int hashCode() &#123; return Objects.hashCode(optional); &#125; @Override public String toString() &#123; return optional != null ? optional.toString() : "Optional.empty"; &#125;&#125;]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>java8</tag>
+        <tag>optional</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[搜索收录]]></title>
+    <url>%2Fhexo-sitemap%2F</url>
+    <content type="text"><![CDATA[确认网站是否被收录直接在百度/谷歌搜索 site:blog.zull.cn 提交网站未被收录,会出现提交地址,点击进入.这里用html验证就好了 下载验证html 根据提示,下载验证html,并保存到source根目录 有一个比较坑的地方,source下文件会被模板改变 所以需要再文件头上增加 123 ---layout: false--- 站点地图 插件12npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save 验证hexo g检查public目录下的sitemap.xml和baidusitemap.xml 部署]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[java8常用新特性]]></title>
+    <url>%2Fjava8-new-features%2F</url>
+    <content type="text"><![CDATA[函数式编程-lambda 本质上是匿名函数 语法更简洁 12345678910// Java 8之前：new Thread(new Runnable() &#123; @Override public void run() &#123; System.out.println("Before Java8, too much code for too little to do"); &#125;&#125;).start();//Java 8方式：new Thread( () -&gt; System.out.println("In Java8, Lambda expression rocks !!") ).start(); 格式 无返回值 1234(int params) -&gt; &#123;your Code&#125;// 一个参数的,可以不加小括号;代码块如果只有一行,大括号也不需要;参数类型不需要加params -&gt; your Code(params,params) -&gt; your Code 有返回值 123456params -&gt; your Code(params,params) -&gt; &#123; your Code; return xxx; &#125; 函数接口 常用接口 Function&lt;T, R&gt; Consumer Supplier Predicate FunctionalInterface注解 自定义接口 捕获外部变量 捕获实例或静态变量是没有限制的(可认为是通过 final 类型的局部变量 this 来引用前两者) 捕获的局部变量必须显式的声明为 final 或实际效果的的 final 类型(编译器推断变量的“常量性”（finality）) 例子见com.iflytek.vbox.skill.platform.service.VboxProvinceSkillManagementService#provinceManagement 集合中遍历、排序等 1234List&lt;String&gt; list = Arrays.asList("1", "2", "3", "4", "5", "6");list.listIterator().forEachRemaining(s -&gt; System.out.println(s));list.listIterator().forEachRemaining(System.out::println);list.forEach(System.out::println); 双冒号 检查异常 接口默认方法- 继承 - optional为了避免空指针异常,详见 OptionalPlus 简书例子]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>java8</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo技巧]]></title>
+    <url>%2Fhexo-skill%2F</url>
+    <content type="text"><![CDATA[官方中文文档 介绍source文件下为markdown文章,其中 _drafts 为私密文章 _posts 为正常的文章 目录下可以自行建立文件夹 博客配置站点配置文件_config.yml 说明123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137# Hexo Configuration Hexo配置文件## Docs: https://hexo.io/docs/configuration.html## Source: https://github.com/hexojs/hexo/# 网站信息#标题title: 那年四月#副标题subtitle: 小桥 · 流水 · 人家#网站描述description: 吃饭睡觉打豆豆(づ｡◕‿‿◕｡)づ#作者昵称author: 吃兔子的小萝卜#网站语言，设置简体汉语language: zh-Hans#时区，默认电脑时区#timezone: timezone: Asia/Shanghai# 网址设置#如果网站是放在子目录中，将url设置成'http://yoursite.com/child'，将root设置成'/child/'## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'#网址url: http://wangyiting.win#网站根目录。如果网站是放在子目录中，将root设置成'子目录名'root: /#文章链接地址格式 。即文章存放的目录。permalink: :year/:month/:day/:title/permalink_defaults:# 目录设置#资源文件夹，放在里面的文件会上传到github中source_dir: source#公共文件夹，存放生成的静态文件public_dir: public#标签文件夹，默认是tags。实际存放在source/tags中。tag_dir: tags#rss_dir: rss#档案文件夹，默认是archives。archive_dir: archives#分类文件夹，默认是categories。实际存放在source/categories中。category_dir: categories#代码文件夹，默认是downloads/codecode_dir: downloads/code#国际化文件夹，默认跟language相同i18n_dir: :lang#不需要渲染的文件夹或文件夹,放在[]中# 例如百度和google的站长验证文件，不能渲染，否则会改变内容，不能验证过skip_render: # 写作文章选项# 新建博文（帖子）的默认名称# File name of new postsnew_post_name: :title.md #默认布局模板是post，而不是draft和pagedefault_layout: post#是否将标题转换成标题形式（首字母大写）titlecase: false # Transform title into titlecase#在新标签页面中打开网页external_link: true # Open external links in new tabfilename_case: 0#是否渲染草稿render_drafts: false#启动 Asset 文件夹post_asset_folder: false#把链接改为与根目录的相对位址relative_link: false#显示未来的文章future: true#代码块的设置highlight: enable: true # 使用代码高亮 line_number: true # 显示行号 auto_detect: true # 自动检测语言 tab_replace:# 分类和标签# 默认分类default_category: uncategorized#分类别名category_map:#标签别名tag_map:# 日期和时间格式#Hexo 使用 Moment.js 来解析和显示时间。## You can customize the date format as defined in## http://momentjs.com/docs/#/displaying/format/date_format: YYYY-MM-DDtime_format: HH:mm:ss# 分页配置#每页显示的文章量 per_page: 8#分页路径，在public中可以看到#pagination_dir: page# Extensions 拓展插件配置## Plugins: https://hexo.io/plugins/plugins: baidusitemap: path: baidusitemap.xml#search 站内搜索# 需要安装插件：# npm install hexo-generator-search --save# npm install hexo-generator-searchdb --savesearch: path: search.xml field: post format: html limit: 10000# 主题配置## Themes: https://hexo.io/themes/#theme: false #禁用主题#theme: landscapetheme: next# Deployment 部署配置## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: # 部署到github，取消注释，可同时部署 # github: git@github.com:erbiduo/wyt.github.io.git,master # 部署到coding.net coding: git@git.coding.net:erduo/blog.git,master 新增私密文章1hexo new draft &quot;私密文章标题1&quot; 会在source/_drafts目录下生成md文件 如果你希望强行预览草稿，更改配置文件： render_drafts: true 或者，如下方式启动server： hexo server --drafts 预览的时候不全部显示所有内容md中加上&lt;!--more--&gt; 预览的时候会显示更多按钮 github绑定自己的域名注意: 需要再source文件下新增名为CNAME的文件,内容为域名]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>

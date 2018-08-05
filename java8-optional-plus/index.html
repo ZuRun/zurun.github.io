@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="确认网站是否被收录直接在百度/谷歌搜索 site:blog.zull.cn 提交网站未被收录,会出现提交地址,点击进入.这里用html验证就好了">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="&amp;ensp; &amp;ensp; 网上关于optional用法的文章有一大堆了,但都只是简单的说了下如何去使用,感觉和实际使用中情况差的蛮大的.&amp;ensp; &amp;ensp; 在最初尝试使用optional的时候感觉很迷茫,感觉这个东西作用不大啊,看了遍源码也无法理解意义何在.&amp;ensp; &amp;ensp; 然后强迫自己多使用了几次后,发现这个功能还是挺好用的,也慢慢理解了作者的意图.&amp;ensp; &amp;e">
+<meta name="keywords" content="java,java8,optional">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搜索收录">
-<meta property="og:url" content="http://blog.zull.cn/hexo-sitemap/index.html">
+<meta property="og:title" content="针对java8的Optional进行增强 (OptionalPlus)">
+<meta property="og:url" content="http://blog.zull.cn/java8-optional-plus/index.html">
 <meta property="og:site_name" content="祖的技术博客">
-<meta property="og:description" content="确认网站是否被收录直接在百度/谷歌搜索 site:blog.zull.cn 提交网站未被收录,会出现提交地址,点击进入.这里用html验证就好了">
+<meta property="og:description" content="&amp;ensp; &amp;ensp; 网上关于optional用法的文章有一大堆了,但都只是简单的说了下如何去使用,感觉和实际使用中情况差的蛮大的.&amp;ensp; &amp;ensp; 在最初尝试使用optional的时候感觉很迷茫,感觉这个东西作用不大啊,看了遍源码也无法理解意义何在.&amp;ensp; &amp;ensp; 然后强迫自己多使用了几次后,发现这个功能还是挺好用的,也慢慢理解了作者的意图.&amp;ensp; &amp;e">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-05T09:11:39.231Z">
+<meta property="og:updated_time" content="2018-08-05T14:16:03.239Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搜索收录">
-<meta name="twitter:description" content="确认网站是否被收录直接在百度/谷歌搜索 site:blog.zull.cn 提交网站未被收录,会出现提交地址,点击进入.这里用html验证就好了">
+<meta name="twitter:title" content="针对java8的Optional进行增强 (OptionalPlus)">
+<meta name="twitter:description" content="&amp;ensp; &amp;ensp; 网上关于optional用法的文章有一大堆了,但都只是简单的说了下如何去使用,感觉和实际使用中情况差的蛮大的.&amp;ensp; &amp;ensp; 在最初尝试使用optional的时候感觉很迷茫,感觉这个东西作用不大啊,看了遍源码也无法理解意义何在.&amp;ensp; &amp;ensp; 然后强迫自己多使用了几次后,发现这个功能还是挺好用的,也慢慢理解了作者的意图.&amp;ensp; &amp;e">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.zull.cn/hexo-sitemap/"/>
+  <link rel="canonical" href="http://blog.zull.cn/java8-optional-plus/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>搜索收录 | 祖的技术博客</title>
+  <title>针对java8的Optional进行增强 (OptionalPlus) | 祖的技术博客</title>
   
 
 
@@ -346,7 +346,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.zull.cn/hexo-sitemap/">
+    <link itemprop="mainEntityOfPage" href="http://blog.zull.cn/java8-optional-plus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZuRun">
@@ -363,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">搜索收录
+          <h1 class="post-title" itemprop="name headline">针对java8的Optional进行增强 (OptionalPlus)
               
             
           </h1>
@@ -388,7 +388,7 @@
                 
               
 
-              <time title="创建时间：2018-08-05 12:02:29 / 修改时间：17:11:39" itemprop="dateCreated datePublished" datetime="2018-08-05T12:02:29+08:00">2018-08-05</time>
+              <time title="创建时间：2018-08-05 13:09:55 / 修改时间：22:16:03" itemprop="dateCreated datePublished" datetime="2018-08-05T13:09:55+08:00">2018-08-05</time>
             
 
             
@@ -399,6 +399,24 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -407,10 +425,10 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/hexo-sitemap/#comments" itemprop="discussionUrl">
+                <a href="/java8-optional-plus/#comments" itemprop="discussionUrl">
                 
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="hexo-sitemap/" itemprop="commentCount"></span>
+                        data-disqus-identifier="java8-optional-plus/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -438,16 +456,17 @@
       
 
       
-        <h2 id="确认网站是否被收录"><a href="#确认网站是否被收录" class="headerlink" title="确认网站是否被收录"></a>确认网站是否被收录</h2><p>直接在百度/谷歌搜索 <code>site:blog.zull.cn</code></p>
-<h2 id="提交网站"><a href="#提交网站" class="headerlink" title="提交网站"></a>提交网站</h2><p>未被收录,会出现提交地址,点击进入.这里用html验证就好了<br><a id="more"></a></p>
-<h3 id="下载验证html"><a href="#下载验证html" class="headerlink" title="下载验证html"></a>下载验证html</h3><p> 根据提示,下载验证html,并保存到source根目录</p>
-<p> 有一个比较坑的地方,source下文件会被模板改变<br> 所以需要再文件头上增加<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> ---</span><br><span class="line">layout: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<h3 id="站点地图"><a href="#站点地图" class="headerlink" title="站点地图"></a>站点地图</h3><ul>
-<li>插件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+        <blockquote>
+<p>&ensp; &ensp; 网上关于optional用法的文章有一大堆了,但都只是简单的说了下如何去使用,感觉和实际使用中情况差的蛮大的.<br>&ensp; &ensp; 在最初尝试使用optional的时候感觉很迷茫,感觉这个东西作用不大啊,看了遍源码也无法理解意义何在.<br>&ensp; &ensp; 然后强迫自己多使用了几次后,发现这个功能还是挺好用的,也慢慢理解了作者的意图.<br>&ensp; &ensp; 但随着使用次数增多,发现optional在很多场景下根本无法满足自己的需要,写了一半只能删掉用常规的写法.<br>&ensp; &ensp; 所以为了满足自己的需求,写了OptionalPlus来治愈自己的强迫症</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="optional"><a href="#optional" class="headerlink" title="optional"></a><strong>optional</strong></h1><h2 id="简洁"><a href="#简洁" class="headerlink" title="简洁"></a>简洁</h2><hr>
+<h1 id="optional-plus"><a href="#optional-plus" class="headerlink" title="optional-plus"></a><strong>optional-plus</strong></h1><h2 id="不同场景示例"><a href="#不同场景示例" class="headerlink" title="不同场景示例"></a>不同场景示例</h2><ul>
+<li><h5 id="判断对象是否为空-为空执行A操作-不为空执行B操作"><a href="#判断对象是否为空-为空执行A操作-不为空执行B操作" class="headerlink" title="判断对象是否为空,为空执行A操作,不为空执行B操作"></a>判断对象是否为空,为空执行A操作,不为空执行B操作</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> P2cMessageData <span class="title">example</span><span class="params">()</span></span>&#123;</span><br><span class="line">    P2cMessageData data = <span class="keyword">new</span> P2cMessageData();</span><br><span class="line">    OptionalPlus.ofNullable(getTokenAndSessionByDeviceId(data.getDeviceId()))</span><br><span class="line">        .filter(DebuggingDeviceTokenAndSessionData::getIsReady)</span><br><span class="line">        .filter(deviceTokenAndSessionData -&gt; deviceTokenAndSessionData.getSessionInfo() != <span class="keyword">null</span>)</span><br><span class="line">        .ifNotPresent(() -&gt; &#123;</span><br><span class="line">            logger.info(<span class="string">"无密钥,尝试重新获取密钥!"</span>)</span><br><span class="line">            data.setDecryptedData(<span class="string">"无密钥,尝试重新获取密钥!"</span>);</span><br><span class="line">            ServerConnectGlobal.refreshTokenAndSession(data.getDeviceId());</span><br><span class="line">        &#125;)</span><br><span class="line">        .ifPresent(deviceTokenAndSessionData -&gt; &#123;</span><br><span class="line">            String sessionKey = deviceTokenAndSessionData.getSessionInfo().getSessionKey();</span><br><span class="line">            String devicePinCipher = deviceTokenAndSessionData.getSessionInfo().getDevicePinCipher();</span><br><span class="line"></span><br><span class="line">            data.setDecryptedData(AesUtils.decrypt(data.getMessage().getData(),</span><br><span class="line">                    sessionKey, devicePinCipher));</span><br><span class="line">        &#125;);</span><br><span class="line">    <span class="keyword">return</span> data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p><code>hexo g</code><br>检查public目录下的sitemap.xml和baidusitemap.xml</p>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3>
+<hr>
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码:"></a>完整代码:</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">OptionalPlus</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Optional&lt;T&gt; optional;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">OptionalPlus</span><span class="params">(Optional&lt;T&gt; optional)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.optional = Objects.requireNonNull(optional);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">OptionalPlus&lt;T&gt; <span class="title">empty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> OptionalPlus&lt;&gt;(Optional.empty());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">OptionalPlus&lt;T&gt; <span class="title">of</span><span class="params">(T t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> OptionalPlus&lt;&gt;(Optional.of(t));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">OptionalPlus&lt;T&gt; <span class="title">ofNullable</span><span class="params">(T t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> t == <span class="keyword">null</span> ? empty() : of(t);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">OptionalPlus&lt;T&gt; <span class="title">ofNullable</span><span class="params">(Optional&lt;T&gt; t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> t == <span class="keyword">null</span> ? empty() : <span class="keyword">new</span> OptionalPlus&lt;&gt;(t);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取optional对象,只保证optional不为null</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Optional&lt;T&gt; <span class="title">getOptional</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (optional == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> NoSuchElementException(<span class="string">"No value present"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> optional;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">get</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> getOptional().get();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPresent</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> optional.isPresent();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 如果不为null,执行回调,并返回this</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> consumer</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> OptionalPlus&lt;T&gt; <span class="title">ifPresent</span><span class="params">(Consumer&lt;? <span class="keyword">super</span> T&gt; consumer)</span> </span>&#123;</span><br><span class="line">        optional.ifPresent(consumer);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> OptionalPlus&lt;T&gt; <span class="title">filter</span><span class="params">(Predicate&lt;? <span class="keyword">super</span> T&gt; predicate)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> optional.filter(predicate).isPresent() ? <span class="keyword">this</span> : empty();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> &lt;U&gt; <span class="function">OptionalPlus&lt;U&gt; <span class="title">map</span><span class="params">(Function&lt;? <span class="keyword">super</span> T, ? extends U&gt; mapper)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> OptionalPlus.ofNullable(optional.map(mapper));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">orElse</span><span class="params">(T other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> optional.orElse(other);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> T <span class="title">orElseGet</span><span class="params">(Supplier&lt;? extends T&gt; other)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> optional.orElseGet(other);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> &lt;X extends Throwable&gt; <span class="function">T <span class="title">orElseThrow</span><span class="params">(Supplier&lt;? extends X&gt; exceptionSupplier)</span> <span class="keyword">throws</span> X </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> optional.orElseThrow(exceptionSupplier);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 如果对象为null,执行回调,并返回this</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> noArgsFunction</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> OptionalPlus&lt;T&gt; <span class="title">ifNotPresent</span><span class="params">(NoArgsFunction noArgsFunction)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!isPresent()) &#123;</span><br><span class="line">            noArgsFunction.todo();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span> == obj) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!(obj <span class="keyword">instanceof</span> OptionalPlus)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        OptionalPlus&lt;?&gt; other = (OptionalPlus&lt;?&gt;) obj;</span><br><span class="line">        <span class="keyword">return</span> Objects.equals(optional, other.getOptional());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Objects.hashCode(optional);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> optional != <span class="keyword">null</span></span><br><span class="line">                ? optional.toString()</span><br><span class="line">                : <span class="string">"Optional.empty"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -468,7 +487,7 @@
     <strong>本文作者： </strong>ZuRun</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://blog.zull.cn/hexo-sitemap/" title="搜索收录">http://blog.zull.cn/hexo-sitemap/</a>
+    <a href="http://blog.zull.cn/java8-optional-plus/" title="针对java8的Optional进行增强 (OptionalPlus)">http://blog.zull.cn/java8-optional-plus/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -481,7 +500,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/java8/" rel="tag"># java8</a>
+          
+            <a href="/tags/optional/" rel="tag"># optional</a>
           
         </div>
       
@@ -494,8 +517,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/java8-new-features/" rel="next" title="java8常用新特性">
-                <i class="fa fa-chevron-left"></i> java8常用新特性
+              <a href="/hexo-sitemap/" rel="next" title="搜索收录">
+                <i class="fa fa-chevron-left"></i> 搜索收录
               </a>
             
           </div>
@@ -504,8 +527,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/java8-optional-plus/" rel="prev" title="针对java8的Optional进行增强 (OptionalPlus)">
-                针对java8的Optional进行增强 (OptionalPlus) <i class="fa fa-chevron-right"></i>
+              <a href="/hexo-build/" rel="prev" title="(一)hexo搭建">
+                (一)hexo搭建 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -678,7 +701,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#确认网站是否被收录"><span class="nav-number">1.</span> <span class="nav-text">确认网站是否被收录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交网站"><span class="nav-number">2.</span> <span class="nav-text">提交网站</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载验证html"><span class="nav-number">2.1.</span> <span class="nav-text">下载验证html</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#站点地图"><span class="nav-number">2.2.</span> <span class="nav-text">站点地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证"><span class="nav-number">2.3.</span> <span class="nav-text">验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署"><span class="nav-number">2.4.</span> <span class="nav-text">部署</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#optional"><span class="nav-number">1.</span> <span class="nav-text">optional</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简洁"><span class="nav-number">1.1.</span> <span class="nav-text">简洁</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#optional-plus"><span class="nav-number">2.</span> <span class="nav-text">optional-plus</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#不同场景示例"><span class="nav-number">2.1.</span> <span class="nav-text">不同场景示例</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#判断对象是否为空-为空执行A操作-不为空执行B操作"><span class="nav-number">2.1.0.0.1.</span> <span class="nav-text">判断对象是否为空,为空执行A操作,不为空执行B操作</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完整代码"><span class="nav-number">2.2.</span> <span class="nav-text">完整代码:</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -844,9 +867,9 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'http://blog.zull.cn/hexo-sitemap/';
-        this.page.identifier = 'hexo-sitemap/';
-        this.page.title = '搜索收录';
+        this.page.url = 'http://blog.zull.cn/java8-optional-plus/';
+        this.page.identifier = 'java8-optional-plus/';
+        this.page.title = '针对java8的Optional进行增强 (OptionalPlus)';
         };
       function loadComments () {
         var d = document, s = d.createElement('script');
