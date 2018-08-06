@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zull.cn/hexo-sitemap/</loc>
+    
+    <lastmod>2018-08-06T07:16:08.946Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/technical-proposal/</loc>
+    
+    <lastmod>2018-08-06T03:29:47.993Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/hexo-build/</loc>
+    
+    <lastmod>2018-08-06T03:17:24.631Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/markdown/</loc>
+    
+    <lastmod>2018-08-06T01:51:18.224Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zull.cn/hexo-skill/</loc>
     
     <lastmod>2018-08-05T15:17:39.338Z</lastmod>
@@ -37,23 +65,9 @@
   </url>
   
   <url>
-    <loc>http://blog.zull.cn/hexo-build/</loc>
-    
-    <lastmod>2018-08-05T12:09:07.291Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://blog.zull.cn/java8-new-features/</loc>
     
     <lastmod>2018-08-05T09:45:52.193Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.zull.cn/hexo-sitemap/</loc>
-    
-    <lastmod>2018-08-05T09:11:39.231Z</lastmod>
     
   </url>
   
