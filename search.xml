@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[评论系统valine]]></title>
+    <url>%2Fvaline-system-valine%2F</url>
+    <content type="text"><![CDATA[valine - 一款快速、简洁且高效的无后端评论系统。 特性 快速 安全 Emoji 😉 无后端实现 MarkDown 全语法支持 轻量易用(~15kb gzipped) 文章阅读量统计 v1.2.0+ 准备工作LeanCloud存储评论内容需要保存到LeanCloud,注册账号并创建应用 生效next主题next主题新版的主题配置中添加此配置了 _config.yml中搜索valine,配置上LeanCloud的AppId和AppKey其他配合自行修改即可 配置1234567891011valine: enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version. appid: # your leancloud application appid appkey: # your leancloud application appkey notify: true # mail notifier , https://github.com/xCss/Valine/wiki verify: true # Verification code placeholder: Just go go # comment box placeholder avatar: mp # gravatar style 头像 guest_info: nick,mail,link # custom comment header pageSize: 10 # pagination size visitor: true # 评论系统 leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html]]></content>
+      <tags>
+        <tag>hexo</tag>
+        <tag>valine</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo-plugins]]></title>
+    <url>%2Fhexo%2Fhexo-plugins%2F</url>
+    <content type="text"><![CDATA[UML根据markdown,生成uml图 详见:github:hexo-filter-plantuml install1npm install --save hexo-filter-plantuml eg. markdown详细用法:官网http://plantuml.com/markdown 在线预览]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[markdown]]></title>
     <url>%2Fmarkdown%2F</url>
-    <content type="text"><![CDATA[缩进&amp;ensp; &amp;ensp;]]></content>
+    <content type="text"><![CDATA[缩进&amp;ensp; &amp;ensp; UML图]]></content>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[(转)谈技术建议书编写]]></title>

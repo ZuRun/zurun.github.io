@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zull.cn/valine-system-valine/</loc>
+    
+    <lastmod>2018-08-10T17:10:00.864Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/hexo/hexo-plugins/</loc>
+    
+    <lastmod>2018-08-10T17:06:01.643Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/markdown/</loc>
+    
+    <lastmod>2018-08-10T16:15:19.144Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zull.cn/hexo-sitemap/</loc>
     
     <lastmod>2018-08-06T07:16:08.946Z</lastmod>
@@ -19,13 +40,6 @@
     <loc>http://blog.zull.cn/hexo-build/</loc>
     
     <lastmod>2018-08-06T03:17:24.631Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.zull.cn/markdown/</loc>
-    
-    <lastmod>2018-08-06T01:51:18.224Z</lastmod>
     
   </url>
   
