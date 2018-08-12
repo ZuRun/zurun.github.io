@@ -3,7 +3,10 @@
   <entry>
     <title><![CDATA[next主题个性化配置]]></title>
     <url>%2Fhexo-next-theme-personalized-tutorial%2F</url>
-    <content type="text"><![CDATA[详见http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html 文章字数统计与阅读时间Usagehexo‘s _config.yml文件 增加12345symbols_count_time: symbols: true time: true total_symbols: true total_time: true Next主题_config.yml配置 ,搜索symbols_count_time]]></content>
+    <content type="text"><![CDATA[[参考博客](http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html) 文章字数统计与阅读时间Usagehexo‘s _config.yml文件 增加12345symbols_count_time: symbols: true time: true total_symbols: true total_time: true Next主题_config.yml配置 ,搜索symbols_count_time 参考链接: http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
@@ -12,6 +15,9 @@
     <title><![CDATA[评论系统valine]]></title>
     <url>%2Fvaline-system-valine%2F</url>
     <content type="text"><![CDATA[valine - 一款快速、简洁且高效的无后端评论系统。 特性 快速 安全 Emoji 😉 无后端实现 MarkDown 全语法支持 轻量易用(~15kb gzipped) 文章阅读量统计 v1.2.0+ 准备工作LeanCloud存储评论内容需要保存到LeanCloud,注册账号并创建应用 生效next主题next主题新版的主题配置中添加此配置了 _config.yml中搜索valine,配置上LeanCloud的AppId和AppKey其他配合自行修改即可 配置1234567891011valine: enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version. appid: # your leancloud application appid appkey: # your leancloud application appkey notify: true # mail notifier , https://github.com/xCss/Valine/wiki verify: true # Verification code placeholder: Just go go # comment box placeholder avatar: mp # gravatar style 头像 guest_info: nick,mail,link # custom comment header pageSize: 10 # pagination size visitor: true # 评论系统 leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
         <tag>valine</tag>
@@ -21,6 +27,9 @@
     <title><![CDATA[hexo-plugins]]></title>
     <url>%2Fhexo%2Fhexo-plugins%2F</url>
     <content type="text"><![CDATA[UML根据markdown,生成uml图 详见:github:hexo-filter-plantuml install1npm install --save hexo-filter-plantuml eg. markdown详细用法:官网http://plantuml.com/markdown 在线预览]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
@@ -48,6 +57,9 @@
     <title><![CDATA[(一)hexo搭建]]></title>
     <url>%2Fhexo-build%2F</url>
     <content type="text"><![CDATA[nodeJs环境 安装node 从官网地址下载稳定版,并安装 环境配置 如果node -v 不显示版本号,则需要配置环境变量 配置全局环境变量 vim .bash_profile 1PATH=$PATH:/usr/local/bin/ 安装使用 npm 安装 Hexo。 1sudo npm install -g hexo-cli 使用cd到路径后1hexo init 建立hexo项目,即可开始使用]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
         <tag>nodejs</tag>
@@ -70,6 +82,9 @@
     <title><![CDATA[搜索seo等]]></title>
     <url>%2Fhexo-sitemap%2F</url>
     <content type="text"><![CDATA[收录确认网站是否被收录直接在百度/谷歌搜索 site:blog.zull.cn 提交网站未被收录,会出现提交地址,点击进入.这里用html验证就好了 下载验证html 根据提示,下载验证html,并保存到source根目录 有一个比较坑的地方,source下文件会被模板改变 所以需要再文件头上增加 123 ---layout: false--- 站点地图 插件12npm install hexo-generator-sitemap --savenpm install hexo-generator-baidu-sitemap --save 验证hexo g检查public目录下的sitemap.xml和baidusitemap.xml 部署seokeywordshttps://segmentfault.com/a/1190000007477815在博客根目录下找到_config.yml文件，在所示地方添加keywords: 关键字1,关键字2,关键字3…，采用英文逗号隔开，注意keywords与关键词之间的空格12345678# Sitetitle: 站点标题subtitle: 站点副标题description: 站点描述author: 站点作者language: zh-CNtimezone:keywords: 前端博客,JavaScript,html5,css3,Jquery,NodeJs,Ubuntu（#博客关键字）]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
@@ -90,6 +105,9 @@
     <title><![CDATA[hexo技巧]]></title>
     <url>%2Fhexo-skill%2F</url>
     <content type="text"><![CDATA[官方中文文档 介绍source文件下为markdown文章,其中 _drafts 为私密文章 _posts 为正常的文章 目录下可以自行建立文件夹 博客配置站点配置文件_config.yml 说明123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137# Hexo Configuration Hexo配置文件## Docs: https://hexo.io/docs/configuration.html## Source: https://github.com/hexojs/hexo/# 网站信息#标题title: 那年四月#副标题subtitle: 小桥 · 流水 · 人家#网站描述description: 吃饭睡觉打豆豆(づ｡◕‿‿◕｡)づ#作者昵称author: 吃兔子的小萝卜#网站语言，设置简体汉语language: zh-Hans#时区，默认电脑时区#timezone: timezone: Asia/Shanghai# 网址设置#如果网站是放在子目录中，将url设置成'http://yoursite.com/child'，将root设置成'/child/'## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'#网址url: http://wangyiting.win#网站根目录。如果网站是放在子目录中，将root设置成'子目录名'root: /#文章链接地址格式 。即文章存放的目录。permalink: :year/:month/:day/:title/permalink_defaults:# 目录设置#资源文件夹，放在里面的文件会上传到github中source_dir: source#公共文件夹，存放生成的静态文件public_dir: public#标签文件夹，默认是tags。实际存放在source/tags中。tag_dir: tags#rss_dir: rss#档案文件夹，默认是archives。archive_dir: archives#分类文件夹，默认是categories。实际存放在source/categories中。category_dir: categories#代码文件夹，默认是downloads/codecode_dir: downloads/code#国际化文件夹，默认跟language相同i18n_dir: :lang#不需要渲染的文件夹或文件夹,放在[]中# 例如百度和google的站长验证文件，不能渲染，否则会改变内容，不能验证过skip_render: # 写作文章选项# 新建博文（帖子）的默认名称# File name of new postsnew_post_name: :title.md #默认布局模板是post，而不是draft和pagedefault_layout: post#是否将标题转换成标题形式（首字母大写）titlecase: false # Transform title into titlecase#在新标签页面中打开网页external_link: true # Open external links in new tabfilename_case: 0#是否渲染草稿render_drafts: false#启动 Asset 文件夹post_asset_folder: false#把链接改为与根目录的相对位址relative_link: false#显示未来的文章future: true#代码块的设置highlight: enable: true # 使用代码高亮 line_number: true # 显示行号 auto_detect: true # 自动检测语言 tab_replace:# 分类和标签# 默认分类default_category: uncategorized#分类别名category_map:#标签别名tag_map:# 日期和时间格式#Hexo 使用 Moment.js 来解析和显示时间。## You can customize the date format as defined in## http://momentjs.com/docs/#/displaying/format/date_format: YYYY-MM-DDtime_format: HH:mm:ss# 分页配置#每页显示的文章量 per_page: 8#分页路径，在public中可以看到#pagination_dir: page# Extensions 拓展插件配置## Plugins: https://hexo.io/plugins/plugins: baidusitemap: path: baidusitemap.xml#search 站内搜索# 需要安装插件：# npm install hexo-generator-search --save# npm install hexo-generator-searchdb --savesearch: path: search.xml field: post format: html limit: 10000# 主题配置## Themes: https://hexo.io/themes/#theme: false #禁用主题#theme: landscapetheme: next# Deployment 部署配置## Docs: https://hexo.io/docs/deployment.htmldeploy: type: git repo: # 部署到github，取消注释，可同时部署 # github: git@github.com:erbiduo/wyt.github.io.git,master # 部署到coding.net coding: git@git.coding.net:erduo/blog.git,master 新增私密文章1hexo new draft &quot;私密文章标题1&quot; 会在source/_drafts目录下生成md文件 如果你希望强行预览草稿，更改配置文件： render_drafts: true 或者，如下方式启动server： hexo server --drafts 预览的时候不全部显示所有内容md中加上&lt;!--more--&gt; 预览的时候会显示更多按钮 github绑定自己的域名注意: 需要再source文件下新增名为CNAME的文件,内容为域名]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
         <tag>hexo</tag>
       </tags>
