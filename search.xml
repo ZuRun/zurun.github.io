@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[next主题个性化配置]]></title>
     <url>%2Fhexo-next-theme-personalized-tutorial%2F</url>
-    <content type="text"><![CDATA[[参考博客](http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html) 文章字数统计与阅读时间Usagehexo‘s _config.yml文件 增加12345symbols_count_time: symbols: true time: true total_symbols: true total_time: true Next主题_config.yml配置 ,搜索symbols_count_time 参考链接: http://shenzekun.cn/hexo%E7%9A%84next%E4%B8%BB%E9%A2%98%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B.html]]></content>
+    <content type="text"><![CDATA[文章字数统计与阅读时间Usagehexo‘s _config.yml文件 增加12345symbols_count_time: symbols: true time: true total_symbols: true total_time: true Next主题_config.yml配置 ,搜索symbols_count_time 参考链接]]></content>
       <categories>
         <category>hexo</category>
       </categories>
