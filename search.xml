@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[(二) java多线程 - 线程常用方法和线程的状态]]></title>
+    <url>%2Fjava-thread-two%2F</url>
+    <content type="text"><![CDATA[线程只有5种状态。整个生命周期就是这几种状态的切换。 run()和start()区别 ： run方法就是普通对象的普通方法，只有调用了start()后，Java才会将线程对象和操作系统中实际的线程进行映射，再来执行run方法 123456789101112131415161718192021public class StartAndRun extents BaseTest&#123; public static class ThreadRun extends Thread &#123; @Override public void run()&#123; try &#123; TimeUnit.SECONDS.sleep(1); log(Thread.currentThread().getName()); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; &#125; &#125; public static void main(String[] args)&#123; Thread t=new ThreadRun(); t.setName("BeCalled"); // 输出"main" t.run(); // 输出"BeCalled",两次输出时间间隔1s t.start(); &#125;&#125; 线程守护 和主线程共死，finally不能保证一定执行 1234567891011121314151617181920212223242526public class DaemonThread &#123; private static class UseThread extends Thread &#123; @Override public void run() &#123; try &#123; while (!isInterrupted()) &#123; System.out.println(Thread.currentThread().getName() + " I am extends Thread."); &#125; System.out.println(Thread.currentThread().getName() + " interrupt flag is " + isInterrupted()); &#125; finally &#123; System.out.println("...........finally"); &#125; &#125; &#125; public static void main(String[] args) throws InterruptedException &#123; UseThread useThread = new UseThread(); // 设置为守护线程,需要再start()方法之前 useThread.setDaemon(true); useThread.start(); Thread.sleep(5); // useThread.interrupt(); &#125;&#125; 设置了守护线程后输出为:12345Thread-0 I am extends Thread.Thread-0 I am extends Thread.Thread-0 I am extends Thread.Thread-0 I am extends Thread.Process finished with exit code 0 如果不设置守护进程,当主线程执行完毕后,userThread还会继续执行,直到执行完毕设置了守护进程后,子线程会中断,即使有final方法块,也不一定执行]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>thread</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[(一) java多线程 - 认识Java里的线程]]></title>
+    <url>%2Fjava-thread-one%2F</url>
+    <content type="text"><![CDATA[多线程可以充分利用cpu的资源、加快用户响应的时间，程序模块化，异步化但是使用不当,也容易出现问题 线程共享资源，存在冲突； 容易导致死锁； 启用太多的线程，就有搞垮机器的可能 新启线程方式 实现Runnable接口(常用) 123456789101112131415161718public class NewThread &#123; /**实现Runnable接口*/ private static class UseRun implements Runnable &#123; @Override public void run() &#123; System.out.println("I am implements Runnable"); &#125; &#125; public static void main(String[] args) &#123; UseRun useRun = new UseRun(); new Thread(useRun).start(); // java lambda方式 new Thread(() -&gt; System.out.println("In Java8, Lambda expression rocks !!")) .start(); &#125;&#125; 实现Callable接口,允许有返回值 继承Thread类 不推荐使用此方式,java是单继承的 线程停止 java线程是协作式 如果优雅的响应中断线程推荐使用以下方式: interrupt() 方法 中断一个线程,并不会强制中断,告诉线程可以中断(中断标志位会设置为true) static方法interrupted() 判断当前线程是否处于终端状态,同时中断标志位改为false 1.可以通过isInterrupted()与静态方法interrupted() 判断当前线程是否处于中断状态2.如果用自定义变量来标示是否中断的话,当while循环中在调用阻塞方法时,即使将中断标示置为true,也不会立即响应.(线程被阻塞了) interrupt() 方法1234567891011121314public static void main(String[] args) throws InterruptedException &#123; Thread thread = new Thread(() -&gt; &#123; String threadName = Thread.currentThread().getName(); System.out.println("Thread is start"); while (!Thread.currentThread().isInterrupted()) &#123; System.out.println(threadName + " is run"); &#125; System.out.println(threadName + " interrupt flag is " + Thread.currentThread().isInterrupted()); &#125;, "endThreadA"); thread.start(); Thread.sleep(1000L); thread.interrupt();&#125; 自定义变量标示中断(不推荐)1234567891011121314151617181920212223242526272829303132333435363738394041/*** 自定义变量标示是否中断线程*/public static class CustomizedInterruptThread extends Thread &#123; /** * 标示是否中断线程 */ private volatile boolean cancel = false; @Override public void interrupt() &#123; this.cancel = true; &#125; public CustomizedInterruptThread(String threadName) &#123; super(threadName); &#125; @Override public void run() &#123; String threadName = Thread.currentThread().getName(); while (!cancel) &#123; try &#123; Thread.sleep(2000L); log(threadName + " is run,flag is " + cancel); &#125; catch (InterruptedException e) &#123; log(threadName + " throw InterruptedException,flag is " + cancel); e.printStackTrace(); &#125; &#125; log(threadName + " cancel flag is " + cancel); &#125;&#125;public static void main(String[] args) throws InterruptedException &#123; Thread flagInterruptThread = new CustomizedInterruptThread("FlagInterruptThread"); flagInterruptThread.start(); Thread.sleep(100L); flagInterruptThread.interrupt(); System.out.println("Thread interrupt time:" + System.currentTimeMillis());&#125; 执行后输出1232018-08-24 00:22:08:940 - giving instructions to interrupt 2018-08-24 00:22:10:840 - FlagInterruptThread is run,flag is true2018-08-24 00:22:10:840 - FlagInterruptThread cancel flag is true 可以发现,发出中断指令后,等待了1900ms线程才终止 InterruptedException异常 java中所有阻塞方法都会抛出InterruptedException异常 方法里如果抛出InterruptedException异常,会将interrupt标志位复位为false,如果需要让线程继续中断的话,需要在catch中再次执行interrupt()方法 123456789101112131415161718192021222324252627282930/*** interrupt()方法标示 中断*/public static class InterruptThread implements Runnable &#123; @Override public void run() &#123; String threadName = Thread.currentThread().getName(); while (!Thread.currentThread().isInterrupted()) &#123; try &#123; Thread.sleep(1000L); LogUtils.log(threadName + " is run,flag is " + Thread.currentThread().isInterrupted()); &#125; catch (InterruptedException e) &#123; // 根据业务需要,决定是否重新标识中断标识 Thread.currentThread().interrupt(); LogUtils.log(threadName + " throw InterruptedException,flag is " + Thread.currentThread().isInterrupted()); e.printStackTrace(); &#125; &#125; LogUtils.log(threadName + " cancel flag is " + Thread.currentThread().isInterrupted()); &#125;&#125;public static void main(String[] args) throws InterruptedException &#123; Thread t = new Thread(new InterruptThread(),"InterruptThread"); t.start(); Thread.sleep(100L); // 当子线程在休眠的时候,调用中断方法,会抛出InterruptedException t.interrupt(); LogUtils.log("giving instructions to interrupt2 ");&#125;]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>thread</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[iterm2]]></title>
+    <url>%2Fmac%2Fiterm2%2F</url>
+    <content type="text"><![CDATA[记住密码,自动登录 iterm2登录需要输入密码的服务器,不能记住密码自动登录.现通过Linux expect 的脚本实现自动登录 expect脚本 常用参数 [lindex $argv 0] 执行脚本的参数 示例 12345678910111213141516171819202122## 跳板机脚本#!/usr/bin/expectset TERMSERV 101.200.191.81set USER huizhang3set PASSWORD 0&gt;9HdDJ&#125;UXs|nf2^set UATUN 内网服务器用户名set UATPWD 内网服务器密码# 登录跳板机spawn ssh -p 2112 $USER@$TERMSERVexpect &#123; &quot;yes/no&quot; &#123;send &quot;yes\r&quot;;exp_continue;&#125; &quot;*password:*&quot; &#123; send &quot;$PASSWORD\r&quot; &#125; &#125;# 登录内网expect &quot;Welcome&quot; &#123;send &quot;ssh -p 8025 vmuser@127.0.0.1\r&quot;&#125;expect &#123; &quot;yes/no&quot; &#123;send &quot;yes\r&quot;;exp_continue;&#125; &quot;*password:*&quot; &#123; send &quot;BgL#fgBYE&amp;7BL!LT\r&quot; &#125; &#125;interact 参考链接 执行权限脚本的可执行权限1chmod -R a+x /Users/zurun/iflytek/shell/iterm2/common]]></content>
+      <tags>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[next主题个性化配置]]></title>
     <url>%2Fhexo-next-theme-personalized-tutorial%2F</url>
     <content type="text"><![CDATA[文章字数统计与阅读时间Usagehexo‘s _config.yml文件 增加12345symbols_count_time: symbols: true time: true total_symbols: true total_time: true Next主题_config.yml配置 ,搜索symbols_count_time 参考链接]]></content>

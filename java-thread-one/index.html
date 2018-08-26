@@ -106,25 +106,25 @@
 
 
 
-  <meta name="description" content="valine - 一款快速、简洁且高效的无后端评论系统。  特性 快速 安全 Emoji 😉 无后端实现 MarkDown 全语法支持 轻量易用(~15kb gzipped) 文章阅读量统计 v1.2.0+">
-<meta name="keywords" content="hexo,valine">
+  <meta name="description" content="多线程可以充分利用cpu的资源、加快用户响应的时间，程序模块化，异步化但是使用不当,也容易出现问题  线程共享资源，存在冲突；    容易导致死锁；    启用太多的线程，就有搞垮机器的可能">
+<meta name="keywords" content="java,thread">
 <meta property="og:type" content="article">
-<meta property="og:title" content="评论系统valine">
-<meta property="og:url" content="http://blog.zull.cn/valine-system-valine/index.html">
+<meta property="og:title" content="(一) java多线程 - 认识Java里的线程">
+<meta property="og:url" content="http://blog.zull.cn/java-thread-one/index.html">
 <meta property="og:site_name" content="祖的技术博客">
-<meta property="og:description" content="valine - 一款快速、简洁且高效的无后端评论系统。  特性 快速 安全 Emoji 😉 无后端实现 MarkDown 全语法支持 轻量易用(~15kb gzipped) 文章阅读量统计 v1.2.0+">
+<meta property="og:description" content="多线程可以充分利用cpu的资源、加快用户响应的时间，程序模块化，异步化但是使用不当,也容易出现问题  线程共享资源，存在冲突；    容易导致死锁；    启用太多的线程，就有搞垮机器的可能">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-11T02:59:28.791Z">
+<meta property="og:updated_time" content="2018-08-26T10:16:42.220Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="评论系统valine">
-<meta name="twitter:description" content="valine - 一款快速、简洁且高效的无后端评论系统。  特性 快速 安全 Emoji 😉 无后端实现 MarkDown 全语法支持 轻量易用(~15kb gzipped) 文章阅读量统计 v1.2.0+">
+<meta name="twitter:title" content="(一) java多线程 - 认识Java里的线程">
+<meta name="twitter:description" content="多线程可以充分利用cpu的资源、加快用户响应的时间，程序模块化，异步化但是使用不当,也容易出现问题  线程共享资源，存在冲突；    容易导致死锁；    启用太多的线程，就有搞垮机器的可能">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.zull.cn/valine-system-valine/"/>
+  <link rel="canonical" href="http://blog.zull.cn/java-thread-one/"/>
 
 
 
@@ -134,7 +134,7 @@
   };
 </script>
 
-  <title>评论系统valine | 祖的技术博客</title>
+  <title>(一) java多线程 - 认识Java里的线程 | 祖的技术博客</title>
   
 
 
@@ -344,7 +344,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.zull.cn/valine-system-valine/">
+    <link itemprop="mainEntityOfPage" href="http://blog.zull.cn/java-thread-one/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZuRun">
@@ -361,7 +361,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">评论系统valine
+          <h1 class="post-title" itemprop="name headline">(一) java多线程 - 认识Java里的线程
               
             
           </h1>
@@ -386,12 +386,24 @@
                 
               
 
-              <time title="创建时间：2018-08-11 00:31:54 / 修改时间：10:59:28" itemprop="dateCreated datePublished" datetime="2018-08-11T00:31:54+08:00">2018-08-11</time>
+              <time title="创建时间：2018-08-22 22:49:37" itemprop="dateCreated datePublished" datetime="2018-08-22T22:49:37+08:00">2018-08-22</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-08-26 18:16:42" itemprop="dateModified" datetime="2018-08-26T18:16:42+08:00">2018-08-26</time>
               
             
           </span>
@@ -408,7 +420,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
 
                 
                 
@@ -423,8 +435,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/valine-system-valine/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/valine-system-valine/" itemprop="commentCount"></span>
+                <a href="/java-thread-one/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/java-thread-one/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -432,7 +444,7 @@
 
           
           
-             <span id="/valine-system-valine/" class="leancloud_visitors" data-flag-title="评论系统valine">
+             <span id="/java-thread-one/" class="leancloud_visitors" data-flag-title="(一) java多线程 - 认识Java里的线程">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -457,7 +469,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.1k</span>
+                <span title="本文字数">4.5k</span>
               
 
               
@@ -471,7 +483,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">4 分钟</span>
               
             </div>
           
@@ -492,25 +504,50 @@
 
       
         <blockquote>
-<p><strong><a href="https://valine.js.org/" target="_blank" rel="noopener">valine</a></strong> - 一款快速、简洁且高效的无后端评论系统。</p>
-</blockquote>
-<h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><ul>
-<li>快速</li>
-<li>安全</li>
-<li>Emoji 😉</li>
-<li>无后端实现</li>
-<li>MarkDown 全语法支持</li>
-<li>轻量易用(~15kb gzipped)</li>
-<li>文章阅读量统计 v1.2.0+</li>
-</ul>
-<a id="more"></a>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="LeanCloud存储"><a href="#LeanCloud存储" class="headerlink" title="LeanCloud存储"></a><a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud存储</a></h2><p>评论内容需要保存到LeanCloud,注册账号并创建应用</p>
-<h2 id="生效"><a href="#生效" class="headerlink" title="生效"></a>生效</h2><h3 id="next主题"><a href="#next主题" class="headerlink" title="next主题"></a>next主题</h3><p>next主题新版的主题配置中添加此配置了</p>
-<p>_config.yml中搜索valine,配置上LeanCloud的AppId和AppKey<br>其他配合自行修改即可</p>
+<p>多线程可以充分利用cpu的资源、加快用户响应的时间，程序模块化，异步化<br>但是使用不当,也容易出现问题</p>
 <ul>
-<li>配置<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span> <span class="comment"># When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.</span></span><br><span class="line"><span class="attr">  appid:</span>   <span class="comment"># your leancloud application appid</span></span><br><span class="line"><span class="attr">  appkey:</span>  <span class="comment"># your leancloud application appkey</span></span><br><span class="line"><span class="attr">  notify:</span> <span class="literal">true</span> <span class="comment"># mail notifier , https://github.com/xCss/Valine/wiki</span></span><br><span class="line"><span class="attr">  verify:</span> <span class="literal">true</span> <span class="comment"># Verification code</span></span><br><span class="line"><span class="attr">  placeholder:</span> <span class="string">Just</span> <span class="string">go</span> <span class="string">go</span> <span class="comment"># comment box placeholder</span></span><br><span class="line"><span class="attr">  avatar:</span> <span class="string">mp</span> <span class="comment"># gravatar style 头像</span></span><br><span class="line"><span class="attr">  guest_info:</span> <span class="string">nick,mail,link</span> <span class="comment"># custom comment header</span></span><br><span class="line"><span class="attr">  pageSize:</span> <span class="number">10</span> <span class="comment"># pagination size</span></span><br><span class="line"><span class="attr">  visitor:</span> <span class="literal">true</span> <span class="comment"># 评论系统 leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html</span></span><br></pre></td></tr></table></figure></li>
+<li>线程共享资源，存在冲突；   </li>
+<li>容易导致死锁；   </li>
+<li>启用太多的线程，就有搞垮机器的可能   </li>
 </ul>
-
+</blockquote>
+<a id="more"></a>
+<h1 id="新启线程方式"><a href="#新启线程方式" class="headerlink" title="新启线程方式"></a>新启线程方式</h1><ol>
+<li><strong>实现Runnable接口(常用)</strong></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NewThread</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**实现Runnable接口*/</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">UseRun</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(<span class="string">"I am implements Runnable"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        UseRun useRun = <span class="keyword">new</span> UseRun();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(useRun).start();</span><br><span class="line">        <span class="comment">// java lambda方式</span></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt; System.out.println(<span class="string">"In Java8, Lambda expression rocks !!"</span>))</span><br><span class="line">                .start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><strong>实现Callable接口,允许有返回值</strong></li>
+</ol>
+<ol start="3">
+<li><p><strong>继承Thread类</strong></p>
+<blockquote>
+<p>不推荐使用此方式,java是单继承的</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="线程停止"><a href="#线程停止" class="headerlink" title="线程停止"></a>线程停止</h1><blockquote>
+<p>java线程是协作式</p>
+</blockquote>
+<h2 id="如果优雅的响应中断线程"><a href="#如果优雅的响应中断线程" class="headerlink" title="如果优雅的响应中断线程"></a>如果优雅的响应<code>中断线程</code></h2><p>推荐使用以下方式:</p>
+<ul>
+<li>interrupt() 方法<br>  中断一个线程,并不会强制中断,告诉线程可以中断(<code>中断标志位</code>会设置为true)</li>
+</ul>
+<ul>
+<li>static方法interrupted()<br>  判断当前线程是否处于终端状态,同时中断标志位改为false</li>
+</ul>
+<blockquote>
+<p>1.可以通过isInterrupted()与静态方法interrupted() 判断当前线程是否处于中断状态<br>2.如果用自定义变量来标示是否中断的话,当while循环中在调用阻塞方法时,即使将中断标示置为true,也不会立即响应.(线程被阻塞了)</p>
+</blockquote>
+<h3 id="interrupt-方法"><a href="#interrupt-方法" class="headerlink" title="interrupt() 方法"></a>interrupt() 方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread thread = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">        String threadName = Thread.currentThread().getName();</span><br><span class="line">        System.out.println(<span class="string">"Thread is start"</span>);</span><br><span class="line">        <span class="keyword">while</span> (!Thread.currentThread().isInterrupted()) &#123;</span><br><span class="line">            System.out.println(threadName + <span class="string">" is run"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(threadName + <span class="string">" interrupt flag is "</span> + Thread.currentThread().isInterrupted());</span><br><span class="line">    &#125;, <span class="string">"endThreadA"</span>);</span><br><span class="line"></span><br><span class="line">    thread.start();</span><br><span class="line">    Thread.sleep(<span class="number">1000L</span>);</span><br><span class="line">    thread.interrupt();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="自定义变量标示中断-不推荐"><a href="#自定义变量标示中断-不推荐" class="headerlink" title="自定义变量标示中断(不推荐)"></a>自定义变量标示中断(不推荐)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 自定义变量标示是否中断线程</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">CustomizedInterruptThread</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 标示是否中断线程</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">volatile</span> <span class="keyword">boolean</span> cancel = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">interrupt</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.cancel = <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CustomizedInterruptThread</span><span class="params">(String threadName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(threadName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String threadName = Thread.currentThread().getName();</span><br><span class="line">        <span class="keyword">while</span> (!cancel) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">2000L</span>);</span><br><span class="line">                log(threadName + <span class="string">" is run,flag is "</span> + cancel);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                log(threadName + <span class="string">" throw InterruptedException,flag is "</span> + cancel);</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        log(threadName + <span class="string">" cancel flag is "</span> + cancel);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread flagInterruptThread = <span class="keyword">new</span> CustomizedInterruptThread(<span class="string">"FlagInterruptThread"</span>);</span><br><span class="line">    flagInterruptThread.start();</span><br><span class="line">    Thread.sleep(<span class="number">100L</span>);</span><br><span class="line">    flagInterruptThread.interrupt();</span><br><span class="line">    System.out.println(<span class="string">"Thread interrupt time:"</span> + System.currentTimeMillis());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>执行后输出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2018-08-24 00:22:08:940 - giving instructions to interrupt </span><br><span class="line">2018-08-24 00:22:10:840 - FlagInterruptThread is run,flag is true</span><br><span class="line">2018-08-24 00:22:10:840 - FlagInterruptThread cancel flag is true</span><br></pre></td></tr></table></figure></p>
+<p>可以发现,发出中断指令后,等待了1900ms线程才终止</p>
+<h1 id="InterruptedException异常"><a href="#InterruptedException异常" class="headerlink" title="InterruptedException异常"></a>InterruptedException异常</h1><blockquote>
+<p>java中所有阻塞方法都会抛出InterruptedException异常</p>
+</blockquote>
+<p>方法里如果抛出InterruptedException异常,会将<code>interrupt标志位</code>复位为<code>false</code>,<br>如果需要让线程继续中断的话,需要在catch中再次执行interrupt()方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* interrupt()方法标示 中断</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">InterruptThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String threadName = Thread.currentThread().getName();</span><br><span class="line">        <span class="keyword">while</span> (!Thread.currentThread().isInterrupted()) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">1000L</span>);</span><br><span class="line">                LogUtils.log(threadName + <span class="string">" is run,flag is "</span> + Thread.currentThread().isInterrupted());</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                <span class="comment">// 根据业务需要,决定是否重新标识中断标识</span></span><br><span class="line">                Thread.currentThread().interrupt();</span><br><span class="line">                LogUtils.log(threadName + <span class="string">" throw InterruptedException,flag is "</span> + Thread.currentThread().isInterrupted());</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        LogUtils.log(threadName + <span class="string">" cancel flag is "</span> + Thread.currentThread().isInterrupted());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread t = <span class="keyword">new</span> Thread(<span class="keyword">new</span> InterruptThread(),<span class="string">"InterruptThread"</span>);</span><br><span class="line">    t.start();</span><br><span class="line">    Thread.sleep(<span class="number">100L</span>);</span><br><span class="line">    <span class="comment">// 当子线程在休眠的时候,调用中断方法,会抛出InterruptedException</span></span><br><span class="line">    t.interrupt();</span><br><span class="line">    LogUtils.log(<span class="string">"giving instructions to interrupt2 "</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -530,9 +567,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/java/" rel="tag"># java</a>
           
-            <a href="/tags/valine/" rel="tag"># valine</a>
+            <a href="/tags/thread/" rel="tag"># thread</a>
           
         </div>
       
@@ -545,8 +582,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hexo/hexo-plugins/" rel="next" title="hexo-plugins">
-                <i class="fa fa-chevron-left"></i> hexo-plugins
+              <a href="/mac/iterm2/" rel="next" title="iterm2">
+                <i class="fa fa-chevron-left"></i> iterm2
               </a>
             
           </div>
@@ -555,8 +592,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/hexo-next-theme-personalized-tutorial/" rel="prev" title="next主题个性化配置">
-                next主题个性化配置 <i class="fa fa-chevron-right"></i>
+              <a href="/java-thread-two/" rel="prev" title="(二) java多线程 - 线程常用方法和线程的状态">
+                (二) java多线程 - 线程常用方法和线程的状态 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -736,7 +773,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#特性"><span class="nav-number">1.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LeanCloud存储"><span class="nav-number">2.1.</span> <span class="nav-text">LeanCloud存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生效"><span class="nav-number">2.2.</span> <span class="nav-text">生效</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#next主题"><span class="nav-number">2.2.1.</span> <span class="nav-text">next主题</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#新启线程方式"><span class="nav-number">1.</span> <span class="nav-text">新启线程方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程停止"><span class="nav-number">2.</span> <span class="nav-text">线程停止</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如果优雅的响应中断线程"><span class="nav-number">2.1.</span> <span class="nav-text">如果优雅的响应中断线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#interrupt-方法"><span class="nav-number">2.1.1.</span> <span class="nav-text">interrupt() 方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义变量标示中断-不推荐"><span class="nav-number">2.1.2.</span> <span class="nav-text">自定义变量标示中断(不推荐)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#InterruptedException异常"><span class="nav-number">3.</span> <span class="nav-text">InterruptedException异常</span></a></li></ol></div>
             
 
           </div>

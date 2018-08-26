@@ -4,6 +4,67 @@
 
     
   <url>
+    <loc>http://blog.zull.cn/java-thread-two/</loc>
+    <lastmod>2018-08-26T10:18:44.241Z</lastmod>
+    <data>
+        <display>
+        <title>(二) java多线程 - 线程常用方法和线程的状态</title>
+        <pubTime>2018-08-23T15:30:14.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>thread</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://blog.zull.cn/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zull.cn/java-thread-one/</loc>
+    <lastmod>2018-08-26T10:16:42.220Z</lastmod>
+    <data>
+        <display>
+        <title>(一) java多线程 - 认识Java里的线程</title>
+        <pubTime>2018-08-22T14:49:37.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>thread</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://blog.zull.cn/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zull.cn/mac/iterm2/</loc>
+    <lastmod>2018-08-23T01:11:33.033Z</lastmod>
+    <data>
+        <display>
+        <title>iterm2</title>
+        <pubTime>2018-08-21T08:12:35.000Z</pubTime>
+        
+        <tag>mac</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.zull.cn/hexo-next-theme-personalized-tutorial/</loc>
     <lastmod>2018-08-13T12:49:44.799Z</lastmod>
     <data>

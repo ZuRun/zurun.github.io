@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zull.cn/java-thread-two/</loc>
+    
+    <lastmod>2018-08-26T10:18:44.241Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/java-thread-one/</loc>
+    
+    <lastmod>2018-08-26T10:16:42.220Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/mac/iterm2/</loc>
+    
+    <lastmod>2018-08-23T01:11:33.033Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zull.cn/hexo-next-theme-personalized-tutorial/</loc>
     
     <lastmod>2018-08-13T12:49:44.799Z</lastmod>
