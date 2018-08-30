@@ -106,20 +106,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="祖的技术博客">
-<meta property="og:url" content="http://blog.zull.cn/categories/docs/index.html">
+  <meta name="description" content="synchronized内置锁 可以确保原子性   对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。  spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读  ThreadLocal的使用">
+<meta name="keywords" content="java,thread">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(三) java多线程 - 线程间的共享">
+<meta property="og:url" content="http://blog.zull.cn/java-thread-three/index.html">
 <meta property="og:site_name" content="祖的技术博客">
+<meta property="og:description" content="synchronized内置锁 可以确保原子性   对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。  spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读  ThreadLocal的使用">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-26T13:03:54.654Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="祖的技术博客">
+<meta name="twitter:title" content="(三) java多线程 - 线程间的共享">
+<meta name="twitter:description" content="synchronized内置锁 可以确保原子性   对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。  spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读  ThreadLocal的使用">
 
 
 
 
 
 
-  <link rel="canonical" href="http://blog.zull.cn/categories/docs/"/>
+  <link rel="canonical" href="http://blog.zull.cn/java-thread-three/"/>
 
 
 
@@ -129,7 +134,7 @@
   };
 </script>
 
-  <title>分类: docs | 祖的技术博客</title>
+  <title>(三) java多线程 - 线程间的共享 | 祖的技术博客</title>
   
 
 
@@ -186,7 +191,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -239,7 +244,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
   </li>
@@ -319,85 +324,255 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>docs<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.zull.cn/java-thread-three/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZuRun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="祖的技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/technical-proposal/" itemprop="url">
-              
-                <span itemprop="name">(转)谈技术建议书编写</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">(三) java多线程 - 线程间的共享
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-06T09:29:38+08:00"
-              content="2018-08-06" >
-          08-06
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
+              
+                
+              
+
+              <time title="创建时间：2018-08-26 20:41:18 / 修改时间：21:03:54" itemprop="dateCreated datePublished" datetime="2018-08-26T20:41:18+08:00">2018-08-26</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/java-thread-three/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/java-thread-three/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/java-thread-three/" class="leancloud_visitors" data-flag-title="(三) java多线程 - 线程间的共享">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">199</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="synchronized内置锁"><a href="#synchronized内置锁" class="headerlink" title="synchronized内置锁"></a>synchronized内置锁</h1><blockquote>
+<p>可以确保原子性</p>
+</blockquote>
+<ul>
+<li>对象锁，锁的是类的对象实例。</li>
+<li>类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。</li>
+</ul>
+<p>spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效</p>
+<h1 id="volatile-关键字"><a href="#volatile-关键字" class="headerlink" title="volatile 关键字"></a>volatile 关键字</h1><blockquote>
+<p>不保证原子性<br>常用场景:只有一个线程写,多个线程读</p>
+</blockquote>
+<h1 id="ThreadLocal的使用"><a href="#ThreadLocal的使用" class="headerlink" title="ThreadLocal的使用"></a>ThreadLocal的使用</h1>
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+            <a href="/tags/thread/" rel="tag"># thread</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/java-thread-two/" rel="next" title="(二) java多线程 - 线程常用方法和线程的状态">
+                <i class="fa fa-chevron-left"></i> (二) java多线程 - 线程常用方法和线程的状态
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -418,8 +593,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -530,6 +714,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#synchronized内置锁"><span class="nav-number">1.</span> <span class="nav-text">synchronized内置锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#volatile-关键字"><span class="nav-number">2.</span> <span class="nav-text">volatile 关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ThreadLocal的使用"><span class="nav-number">3.</span> <span class="nav-text">ThreadLocal的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -687,6 +887,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[(三) java多线程 - 线程间的共享]]></title>
+    <url>%2Fjava-thread-three%2F</url>
+    <content type="text"><![CDATA[synchronized内置锁 可以确保原子性 对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。 spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读 ThreadLocal的使用]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>thread</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[(二) java多线程 - 线程常用方法和线程的状态]]></title>
     <url>%2Fjava-thread-two%2F</url>
     <content type="text"><![CDATA[线程只有5种状态。整个生命周期就是这几种状态的切换。 run()和start()区别 ： run方法就是普通对象的普通方法，只有调用了start()后，Java才会将线程对象和操作系统中实际的线程进行映射，再来执行run方法 123456789101112131415161718192021public class StartAndRun extents BaseTest&#123; public static class ThreadRun extends Thread &#123; @Override public void run()&#123; try &#123; TimeUnit.SECONDS.sleep(1); log(Thread.currentThread().getName()); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; &#125; &#125; public static void main(String[] args)&#123; Thread t=new ThreadRun(); t.setName("BeCalled"); // 输出"main" t.run(); // 输出"BeCalled",两次输出时间间隔1s t.start(); &#125;&#125; 线程守护 和主线程共死，finally不能保证一定执行 1234567891011121314151617181920212223242526public class DaemonThread &#123; private static class UseThread extends Thread &#123; @Override public void run() &#123; try &#123; while (!isInterrupted()) &#123; System.out.println(Thread.currentThread().getName() + " I am extends Thread."); &#125; System.out.println(Thread.currentThread().getName() + " interrupt flag is " + isInterrupted()); &#125; finally &#123; System.out.println("...........finally"); &#125; &#125; &#125; public static void main(String[] args) throws InterruptedException &#123; UseThread useThread = new UseThread(); // 设置为守护线程,需要再start()方法之前 useThread.setDaemon(true); useThread.start(); Thread.sleep(5); // useThread.interrupt(); &#125;&#125; 设置了守护线程后输出为:12345Thread-0 I am extends Thread.Thread-0 I am extends Thread.Thread-0 I am extends Thread.Thread-0 I am extends Thread.Process finished with exit code 0 如果不设置守护进程,当主线程执行完毕后,userThread还会继续执行,直到执行完毕设置了守护进程后,子线程会中断,即使有final方法块,也不一定执行]]></content>
@@ -69,7 +81,7 @@
   <entry>
     <title><![CDATA[markdown]]></title>
     <url>%2Fmarkdown%2F</url>
-    <content type="text"><![CDATA[缩进&amp;ensp; &amp;ensp; UML图]]></content>
+    <content type="text"><![CDATA[任务清单1234* [x] 勾选1- [x] 勾选2* [ ] 未勾选1- [ ] 未勾选2 勾选1 勾选2 未勾选1 未勾选2 缩进&amp;ensp; &amp;ensp; UML图见plant-uml]]></content>
       <tags>
         <tag>markdown</tag>
       </tags>
