@@ -106,18 +106,18 @@
 
 
 
-  <meta name="description" content="synchronized内置锁 可以确保原子性   对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。  spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读  ThreadLocal的使用">
+  <meta name="description" content="synchronized内置锁 可以确保原子性   对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。  spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读  ThreadLocal的使用线">
 <meta name="keywords" content="java,thread">
 <meta property="og:type" content="article">
 <meta property="og:title" content="(三) java多线程 - 线程间的共享">
 <meta property="og:url" content="http://blog.zull.cn/java-thread-three/index.html">
 <meta property="og:site_name" content="祖的技术博客">
-<meta property="og:description" content="synchronized内置锁 可以确保原子性   对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。  spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读  ThreadLocal的使用">
+<meta property="og:description" content="synchronized内置锁 可以确保原子性   对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。  spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读  ThreadLocal的使用线">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-26T13:03:54.654Z">
+<meta property="og:updated_time" content="2018-09-01T15:58:56.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="(三) java多线程 - 线程间的共享">
-<meta name="twitter:description" content="synchronized内置锁 可以确保原子性   对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。  spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读  ThreadLocal的使用">
+<meta name="twitter:description" content="synchronized内置锁 可以确保原子性   对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。  spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读  ThreadLocal的使用线">
 
 
 
@@ -386,12 +386,24 @@
                 
               
 
-              <time title="创建时间：2018-08-26 20:41:18 / 修改时间：21:03:54" itemprop="dateCreated datePublished" datetime="2018-08-26T20:41:18+08:00">2018-08-26</time>
+              <time title="创建时间：2018-08-26 20:41:18" itemprop="dateCreated datePublished" datetime="2018-08-26T20:41:18+08:00">2018-08-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-01 23:58:56" itemprop="dateModified" datetime="2018-09-01T23:58:56+08:00">2018-09-01</time>
               
             
           </span>
@@ -457,7 +469,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">199</span>
+                <span title="本文字数">256</span>
               
 
               
@@ -502,7 +514,9 @@
 <h1 id="volatile-关键字"><a href="#volatile-关键字" class="headerlink" title="volatile 关键字"></a>volatile 关键字</h1><blockquote>
 <p>不保证原子性<br>常用场景:只有一个线程写,多个线程读</p>
 </blockquote>
-<h1 id="ThreadLocal的使用"><a href="#ThreadLocal的使用" class="headerlink" title="ThreadLocal的使用"></a>ThreadLocal的使用</h1>
+<h1 id="ThreadLocal的使用"><a href="#ThreadLocal的使用" class="headerlink" title="ThreadLocal的使用"></a>ThreadLocal的使用</h1><h1 id="线程间协作"><a href="#线程间协作" class="headerlink" title="线程间协作"></a>线程间协作</h1><h2 id="notify-notifyAll"><a href="#notify-notifyAll" class="headerlink" title="notify/notifyAll"></a>notify/notifyAll</h2><p>notify<br>notifyAll</p>
+<p>区别:<br>notify只会通知第一个线程,</p>
+
       
     </div>
 
@@ -732,7 +746,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#synchronized内置锁"><span class="nav-number">1.</span> <span class="nav-text">synchronized内置锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#volatile-关键字"><span class="nav-number">2.</span> <span class="nav-text">volatile 关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ThreadLocal的使用"><span class="nav-number">3.</span> <span class="nav-text">ThreadLocal的使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#synchronized内置锁"><span class="nav-number">1.</span> <span class="nav-text">synchronized内置锁</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#volatile-关键字"><span class="nav-number">2.</span> <span class="nav-text">volatile 关键字</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ThreadLocal的使用"><span class="nav-number">3.</span> <span class="nav-text">ThreadLocal的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程间协作"><span class="nav-number">4.</span> <span class="nav-text">线程间协作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#notify-notifyAll"><span class="nav-number">4.1.</span> <span class="nav-text">notify/notifyAll</span></a></li></ol></li></ol></div>
             
 
           </div>

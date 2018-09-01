@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[(三) java多线程 - 线程间的共享]]></title>
     <url>%2Fjava-thread-three%2F</url>
-    <content type="text"><![CDATA[synchronized内置锁 可以确保原子性 对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。 spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读 ThreadLocal的使用]]></content>
+    <content type="text"><![CDATA[synchronized内置锁 可以确保原子性 对象锁，锁的是类的对象实例。 类锁 ，锁的是每个类的的Class对象，每个类的的Class对象在一个虚拟机中只有一个，所以类锁也只有一个。 spring框架下,javabean默认都是单例模式,synchronized方法锁可以保证生效 volatile 关键字 不保证原子性常用场景:只有一个线程写,多个线程读 ThreadLocal的使用线程间协作notify/notifyAllnotifynotifyAll 区别:notify只会通知第一个线程,]]></content>
       <categories>
         <category>java</category>
       </categories>

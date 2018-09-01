@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zull.cn/java-thread-three/</loc>
+    
+    <lastmod>2018-09-01T15:58:56.912Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zull.cn/java-thread-one/</loc>
     
     <lastmod>2018-09-01T15:14:19.400Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://blog.zull.cn/markdown/</loc>
     
     <lastmod>2018-08-30T03:11:55.800Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.zull.cn/java-thread-three/</loc>
-    
-    <lastmod>2018-08-26T13:03:54.654Z</lastmod>
     
   </url>
   
