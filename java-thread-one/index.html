@@ -114,7 +114,7 @@
 <meta property="og:site_name" content="祖的技术博客">
 <meta property="og:description" content="多线程可以充分利用cpu的资源、加快用户响应的时间，程序模块化，异步化但是使用不当,也容易出现问题  线程共享资源，存在冲突；    容易导致死锁；    启用太多的线程，就有搞垮机器的可能">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-26T10:16:42.220Z">
+<meta property="og:updated_time" content="2018-09-01T15:14:19.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="(一) java多线程 - 认识Java里的线程">
 <meta name="twitter:description" content="多线程可以充分利用cpu的资源、加快用户响应的时间，程序模块化，异步化但是使用不当,也容易出现问题  线程共享资源，存在冲突；    容易导致死锁；    启用太多的线程，就有搞垮机器的可能">
@@ -403,7 +403,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-08-26 18:16:42" itemprop="dateModified" datetime="2018-08-26T18:16:42+08:00">2018-08-26</time>
+                <time title="修改时间：2018-09-01 23:14:19" itemprop="dateModified" datetime="2018-09-01T23:14:19+08:00">2018-09-01</time>
               
             
           </span>
@@ -544,7 +544,7 @@
 <p>执行后输出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2018-08-24 00:22:08:940 - giving instructions to interrupt </span><br><span class="line">2018-08-24 00:22:10:840 - FlagInterruptThread is run,flag is true</span><br><span class="line">2018-08-24 00:22:10:840 - FlagInterruptThread cancel flag is true</span><br></pre></td></tr></table></figure></p>
 <p>可以发现,发出中断指令后,等待了1900ms线程才终止</p>
 <h1 id="InterruptedException异常"><a href="#InterruptedException异常" class="headerlink" title="InterruptedException异常"></a>InterruptedException异常</h1><blockquote>
-<p>java中所有阻塞方法都会抛出InterruptedException异常</p>
+<p>java中所有阻塞方法都会抛出InterruptedException异常<br>当子线程在休眠的时候,调用中断方法,会抛出InterruptedException</p>
 </blockquote>
 <p>方法里如果抛出InterruptedException异常,会将<code>interrupt标志位</code>复位为<code>false</code>,<br>如果需要让线程继续中断的话,需要在catch中再次执行interrupt()方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* interrupt()方法标示 中断</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">InterruptThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String threadName = Thread.currentThread().getName();</span><br><span class="line">        <span class="keyword">while</span> (!Thread.currentThread().isInterrupted()) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">1000L</span>);</span><br><span class="line">                LogUtils.log(threadName + <span class="string">" is run,flag is "</span> + Thread.currentThread().isInterrupted());</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                <span class="comment">// 根据业务需要,决定是否重新标识中断标识</span></span><br><span class="line">                Thread.currentThread().interrupt();</span><br><span class="line">                LogUtils.log(threadName + <span class="string">" throw InterruptedException,flag is "</span> + Thread.currentThread().isInterrupted());</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        LogUtils.log(threadName + <span class="string">" cancel flag is "</span> + Thread.currentThread().isInterrupted());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread t = <span class="keyword">new</span> Thread(<span class="keyword">new</span> InterruptThread(),<span class="string">"InterruptThread"</span>);</span><br><span class="line">    t.start();</span><br><span class="line">    Thread.sleep(<span class="number">100L</span>);</span><br><span class="line">    <span class="comment">// 当子线程在休眠的时候,调用中断方法,会抛出InterruptedException</span></span><br><span class="line">    t.interrupt();</span><br><span class="line">    LogUtils.log(<span class="string">"giving instructions to interrupt2 "</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -667,7 +667,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -688,7 +688,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -723,7 +725,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -807,7 +811,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">21k</span>
+    <span title="站点总字数">29k</span>
   
 
   
@@ -818,7 +822,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">19 分钟</span>
+    <span title="站点阅读时长">27 分钟</span>
   
 </div>
 

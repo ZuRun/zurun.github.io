@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://blog.zull.cn/java-thread-one/</loc>
+    <lastmod>2018-09-01T15:14:19.400Z</lastmod>
+    <data>
+        <display>
+        <title>(一) java多线程 - 认识Java里的线程</title>
+        <pubTime>2018-08-22T14:49:37.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>thread</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://blog.zull.cn/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zull.cn/interview/thread/</loc>
+    <lastmod>2018-09-01T14:38:31.249Z</lastmod>
+    <data>
+        <display>
+        <title>阿里P8架构师总结Java并发面试题</title>
+        <pubTime>2018-08-31T15:42:36.000Z</pubTime>
+        
+        <tag>面试</tag>
+         
+         
+           
+             
+              <breadCrumb title="面试" url="http://blog.zull.cn/categories/%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.zull.cn/markdown/</loc>
     <lastmod>2018-08-30T03:11:55.800Z</lastmod>
     <data>
@@ -49,28 +91,6 @@
         <display>
         <title>(二) java多线程 - 线程常用方法和线程的状态</title>
         <pubTime>2018-08-23T15:30:14.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>thread</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://blog.zull.cn/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.zull.cn/java-thread-one/</loc>
-    <lastmod>2018-08-26T10:16:42.220Z</lastmod>
-    <data>
-        <display>
-        <title>(一) java多线程 - 认识Java里的线程</title>
-        <pubTime>2018-08-22T14:49:37.000Z</pubTime>
         
         <tag>java</tag>
          
