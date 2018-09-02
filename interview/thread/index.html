@@ -106,18 +106,18 @@
 
 
 
-  <meta name="description" content="一、什么是线程？ 线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集型任务提速。比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。 二、线程和进程有什么区别？ 线程是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务。不同的进程使用不同的内存空间，而所有的线程">
+  <meta name="description" content="一、什么是线程？ 线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集型任务提速。比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。">
 <meta name="keywords" content="面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="阿里P8架构师总结Java并发面试题">
 <meta property="og:url" content="http://blog.zull.cn/interview/thread/index.html">
 <meta property="og:site_name" content="祖的技术博客">
-<meta property="og:description" content="一、什么是线程？ 线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集型任务提速。比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。 二、线程和进程有什么区别？ 线程是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务。不同的进程使用不同的内存空间，而所有的线程">
+<meta property="og:description" content="一、什么是线程？ 线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集型任务提速。比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-01T14:38:31.249Z">
+<meta property="og:updated_time" content="2018-09-02T07:27:30.160Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里P8架构师总结Java并发面试题">
-<meta name="twitter:description" content="一、什么是线程？ 线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集型任务提速。比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。 二、线程和进程有什么区别？ 线程是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务。不同的进程使用不同的内存空间，而所有的线程">
+<meta name="twitter:description" content="一、什么是线程？ 线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集型任务提速。比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。">
 
 
 
@@ -255,14 +255,6 @@
           <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
   </li>
 
       
@@ -403,7 +395,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-01 22:38:31" itemprop="dateModified" datetime="2018-09-01T22:38:31+08:00">2018-09-01</time>
+                <time title="修改时间：2018-09-02 15:27:30" itemprop="dateModified" datetime="2018-09-02T15:27:30+08:00">2018-09-02</time>
               
             
           </span>
@@ -505,6 +497,7 @@
       
         <p>一、什么是线程？</p>
 <p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集型任务提速。比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。</p>
+<a id="more"></a>
 <p>二、线程和进程有什么区别？</p>
 <p>线程是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务。不同的进程使用不同的内存空间，而所有的线程共享一片相同的内存空间。每个线程都拥有单独的栈内存用来存储本地数据。</p>
 <p>三、如何在Java中实现线程？</p>
@@ -661,6 +654,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/interview/test/" rel="prev" title="练习题">
+                练习题 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -723,7 +720,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -746,7 +743,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -783,7 +782,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -803,6 +804,11 @@
               
                 <span class="links-of-author-item">
                   <a href="mailto:hi@zull.cn" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="/tools/json-online" target="_blank" title="json格式化"><i class="fa fa-fw fa-gg"></i>json格式化</a>
                   
                 </span>
               
@@ -851,7 +857,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">29k</span>
+    <span title="站点总字数">31k</span>
   
 
   
@@ -862,7 +868,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">27 分钟</span>
+    <span title="站点阅读时长">28 分钟</span>
   
 </div>
 

@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zull.cn/git/</loc>
+    
+    <lastmod>2018-09-02T08:17:45.813Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/interview/thread/</loc>
+    
+    <lastmod>2018-09-02T07:27:30.160Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/interview/test/</loc>
+    
+    <lastmod>2018-09-02T07:04:01.530Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zull.cn/java-thread-three/</loc>
     
     <lastmod>2018-09-01T15:58:56.912Z</lastmod>
@@ -12,13 +33,6 @@
     <loc>http://blog.zull.cn/java-thread-one/</loc>
     
     <lastmod>2018-09-01T15:14:19.400Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.zull.cn/interview/thread/</loc>
-    
-    <lastmod>2018-09-01T14:38:31.249Z</lastmod>
     
   </url>
   

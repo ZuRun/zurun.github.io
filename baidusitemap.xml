@@ -4,6 +4,66 @@
 
     
   <url>
+    <loc>http://blog.zull.cn/git/</loc>
+    <lastmod>2018-09-02T08:17:45.813Z</lastmod>
+    <data>
+        <display>
+        <title>git</title>
+        <pubTime>2018-09-02T07:43:01.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://blog.zull.cn/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zull.cn/interview/thread/</loc>
+    <lastmod>2018-09-02T07:27:30.160Z</lastmod>
+    <data>
+        <display>
+        <title>阿里P8架构师总结Java并发面试题</title>
+        <pubTime>2018-08-31T15:42:36.000Z</pubTime>
+        
+        <tag>面试</tag>
+         
+         
+           
+             
+              <breadCrumb title="面试" url="http://blog.zull.cn/categories/%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zull.cn/interview/test/</loc>
+    <lastmod>2018-09-02T07:04:01.530Z</lastmod>
+    <data>
+        <display>
+        <title>练习题</title>
+        <pubTime>2018-09-02T07:02:54.000Z</pubTime>
+        
+        <tag>面试</tag>
+         
+         
+           
+             
+              <breadCrumb title="面试" url="http://blog.zull.cn/categories/%E9%9D%A2%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.zull.cn/java-thread-three/</loc>
     <lastmod>2018-09-01T15:58:56.912Z</lastmod>
     <data>
@@ -41,26 +101,6 @@
            
              
               <breadCrumb title="java" url="http://blog.zull.cn/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.zull.cn/interview/thread/</loc>
-    <lastmod>2018-09-01T14:38:31.249Z</lastmod>
-    <data>
-        <display>
-        <title>阿里P8架构师总结Java并发面试题</title>
-        <pubTime>2018-08-31T15:42:36.000Z</pubTime>
-        
-        <tag>面试</tag>
-         
-         
-           
-             
-              <breadCrumb title="面试" url="http://blog.zull.cn/categories/%E9%9D%A2%E8%AF%95/"/>
           
         </display>
     </data>
