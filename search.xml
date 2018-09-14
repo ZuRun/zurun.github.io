@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[学习路线]]></title>
+    <url>%2Fplan%2F</url>
+    <content type="text"><![CDATA[2018-09-14 gradle学习, 多线程 学习视频 + 笔记]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[gradle]]></title>
+    <url>%2Fgradle-1%2F</url>
+    <content type="text"><![CDATA[taskhello world在bulid.gradle文件中,添加task123task helloword &#123; doLast &#123; println 'hello grade !'&#125;&#125; 在当前目录运行gradle helloworld命令,会输出]]></content>
+      <categories>
+        <category>tools</category>
+      </categories>
+      <tags>
+        <tag>gradle</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git]]></title>
     <url>%2Fgit%2F</url>
     <content type="text"><![CDATA[子仓库 git submodule添加子仓库1git submodule add &lt;仓库地址&gt; &lt;本地路径&gt; 示例1git submodule add git@github.com:ZuRun/json-online.git source/tools/json-online 添加成功后 父仓库根目录会增加了.gitmodule文件。 cat .gitmodule 123[submodule "source/tools/json-online"] path = source/tools/json-online url = git@github.com:ZuRun/json-online.git 父仓库的git 配置文件中会加入了submodule段。 cat .git/config 123submodule "source/tools/json-online"] url = git@github.com:ZuRun/json-online.git active = true .git/modules 下会有子模块的信息 参考链接 简书 新增 检出(checkout)克隆一个包含子仓库的仓库目录，并不会clone下子仓库的文件，只是会克隆下.gitmodule描述文件，需要进一步克隆子仓库文件。 12345// 初始化本地配置文件$ git submodule init// 检出父仓库列出的commit$ git submodule update 或者使用组合指令 1$ git submodule update --init --recursive 删除子仓库 删除submodule rm -rf .git/modules/xxxxx 删除gitconfig中关联信息的配置 12vim .git/config# 删除相关的[submodel] 删除.gitmodules中相关信息 vim .gitmodules Remove it from the cache without the “git” git rm --cached xxxxx 参考链接 stack overflow 删除子仓库,解决xxxxx already exists in the index]]></content>
