@@ -4,8 +4,43 @@
 
     
   <url>
+    <loc>http://blog.zull.cn/git/</loc>
+    <lastmod>2018-09-17T16:36:40.545Z</lastmod>
+    <data>
+        <display>
+        <title>git</title>
+        <pubTime>2018-09-02T07:43:01.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://blog.zull.cn/categories/tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zull.cn/java/dubbo/dubbo/</loc>
+    <lastmod>2018-09-17T04:46:36.534Z</lastmod>
+    <data>
+        <display>
+        <title>dubbo</title>
+        <pubTime>2018-09-17T04:46:31.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.zull.cn/gradle-1/</loc>
-    <lastmod>2018-09-14T09:24:57.823Z</lastmod>
+    <lastmod>2018-09-17T04:46:05.673Z</lastmod>
     <data>
         <display>
         <title>gradle</title>
@@ -16,7 +51,7 @@
          
            
              
-              <breadCrumb title="tools" url="http://blog.zull.cn/categories/tools/"/>
+              <breadCrumb title="gradle" url="http://blog.zull.cn/categories/gradle/"/>
           
         </display>
     </data>
@@ -33,26 +68,6 @@
         
          
            
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.zull.cn/git/</loc>
-    <lastmod>2018-09-02T08:17:45.813Z</lastmod>
-    <data>
-        <display>
-        <title>git</title>
-        <pubTime>2018-09-02T07:43:01.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="http://blog.zull.cn/categories/tools/"/>
-          
         </display>
     </data>
     </url>
