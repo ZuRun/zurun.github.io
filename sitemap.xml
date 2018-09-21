@@ -4,7 +4,21 @@
   <url>
     <loc>http://blog.zull.cn/maven/mvn-repository/</loc>
     
-    <lastmod>2018-09-21T15:29:44.605Z</lastmod>
+    <lastmod>2018-09-21T17:46:39.135Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/dynamic-proxy/</loc>
+    
+    <lastmod>2018-09-21T15:52:57.038Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/git/</loc>
+    
+    <lastmod>2018-09-21T15:52:51.018Z</lastmod>
     
   </url>
   
@@ -12,20 +26,6 @@
     <loc>http://blog.zull.cn/maven/cmd/</loc>
     
     <lastmod>2018-09-21T15:29:40.955Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.zull.cn/dynamic-proxy/</loc>
-    
-    <lastmod>2018-09-19T02:25:09.264Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.zull.cn/git/</loc>
-    
-    <lastmod>2018-09-17T16:36:40.545Z</lastmod>
     
   </url>
   

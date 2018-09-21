@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://blog.zull.cn/maven/mvn-repository/</loc>
-    <lastmod>2018-09-21T15:29:44.605Z</lastmod>
+    <lastmod>2018-09-21T17:46:39.135Z</lastmod>
     <data>
         <display>
         <title>发布jar包到Maven中央仓库</title>
@@ -19,6 +19,48 @@
            
              
               <breadCrumb title="maven" url="http://blog.zull.cn/categories/maven/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zull.cn/dynamic-proxy/</loc>
+    <lastmod>2018-09-21T15:52:57.038Z</lastmod>
+    <data>
+        <display>
+        <title>动态代理</title>
+        <pubTime>2018-09-19T02:24:23.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>proxy</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://blog.zull.cn/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.zull.cn/git/</loc>
+    <lastmod>2018-09-21T15:52:51.018Z</lastmod>
+    <data>
+        <display>
+        <title>git</title>
+        <pubTime>2018-09-02T07:43:01.000Z</pubTime>
+        
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="tools" url="http://blog.zull.cn/categories/tools/"/>
           
         </display>
     </data>
@@ -41,48 +83,6 @@
            
              
               <breadCrumb title="maven" url="http://blog.zull.cn/categories/maven/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.zull.cn/dynamic-proxy/</loc>
-    <lastmod>2018-09-19T02:25:09.264Z</lastmod>
-    <data>
-        <display>
-        <title>动态代理</title>
-        <pubTime>2018-09-19T02:24:23.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>proxy</tag>
-         
-         
-           
-             
-              <breadCrumb title="java" url="http://blog.zull.cn/categories/java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.zull.cn/git/</loc>
-    <lastmod>2018-09-17T16:36:40.545Z</lastmod>
-    <data>
-        <display>
-        <title>git</title>
-        <pubTime>2018-09-02T07:43:01.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="tools" url="http://blog.zull.cn/categories/tools/"/>
           
         </display>
     </data>

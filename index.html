@@ -599,12 +599,24 @@
                 
               
 
-              <time title="创建时间：2018-09-21 00:38:28 / 修改时间：23:29:44" itemprop="dateCreated datePublished" datetime="2018-09-21T00:38:28+08:00">2018-09-21</time>
+              <time title="创建时间：2018-09-21 00:38:28" itemprop="dateCreated datePublished" datetime="2018-09-21T00:38:28+08:00">2018-09-21</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-22 01:46:39" itemprop="dateModified" datetime="2018-09-22T01:46:39+08:00">2018-09-22</time>
               
             
           </span>
@@ -670,7 +682,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.6k</span>
+                <span title="本文字数">2k</span>
               
 
               
@@ -684,7 +696,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -739,10 +751,20 @@
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;scm&gt;</span><br><span class="line">    &lt;url&gt; https://github.com/ZuRun/tracing&lt;/url&gt;</span><br><span class="line">    &lt;connection&gt;https://github.com/ZuRun/tracing.git&lt;/connection&gt;</span><br><span class="line">    &lt;developerConnection&gt;https://github.com/ZuRun/tracing&lt;/developerConnection&gt;</span><br><span class="line">&lt;/scm&gt;</span><br><span class="line">&lt;!--mvn--&gt;</span><br><span class="line">&lt;developers&gt;</span><br><span class="line">    &lt;developer&gt;</span><br><span class="line">        &lt;name&gt;Sonatype账号&lt;/name&gt;</span><br><span class="line">        &lt;email&gt;Sonatype邮箱&lt;/email&gt;</span><br><span class="line">        &lt;url&gt;https://github.com/ZuRun/tracing&lt;/url&gt;</span><br><span class="line">    &lt;/developer&gt;</span><br><span class="line">&lt;/developers&gt;</span><br><span class="line">&lt;distributionManagement&gt;</span><br><span class="line">    &lt;snapshotRepository&gt;</span><br><span class="line">        &lt;id&gt;sonatype-nexus-snapshots&lt;/id&gt;</span><br><span class="line">        &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots&lt;/url&gt;</span><br><span class="line">    &lt;/snapshotRepository&gt;</span><br><span class="line">&lt;/distributionManagement&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h1 id="打包上传"><a href="#打包上传" class="headerlink" title="打包上传"></a>打包上传</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean deploy -X</span><br></pre></td></tr></table></figure>
+<h1 id="打包上传"><a href="#打包上传" class="headerlink" title="打包上传"></a>打包上传</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mvn clean deploy -X</span><br><span class="line"># 或者下面命令,区别自行google</span><br><span class="line">mvn clean deploy -P release</span><br></pre></td></tr></table></figure>
+<h1 id="在OSS中发布构件"><a href="#在OSS中发布构件" class="headerlink" title="在OSS中发布构件"></a>在OSS中发布构件</h1><h2 id="登陆仓库"><a href="#登陆仓库" class="headerlink" title="登陆仓库"></a>登陆<a href="https://oss.sonatype.org/" target="_blank" rel="noopener">仓库</a></h2><ol>
+<li><p>左边菜单找到’<code>Staging Repositories</code>‘</p>
+</li>
+<li><p>右边上面一点有一个输入搜索框输入你的groupid进行快速定位， 可以发现这时你的构件状态是“open”，勾选你的构件，查看校验的结果信息， 如果没有错误就可以点击刚才勾选的checkbox上面右边一点的“close”按钮，在弹出框中“confirm”，这里又需要校验一次，稍后结果会通过邮箱通知。</p>
+</li>
+<li><p>close成功后,点击refresh刷新,并点击release按钮</p>
+</li>
+<li><p>release成功后,Staging Repositories中会看不到此构件,大概等待2个小时,可以在中央仓库中搜多到构件</p>
+</li>
+</ol>
 <h1 id="日常操作"><a href="#日常操作" class="headerlink" title="日常操作"></a>日常操作</h1><h2 id="更改版本号"><a href="#更改版本号" class="headerlink" title="更改版本号"></a>更改版本号</h2><p>见 <a href="/maven/cmd#更新项目版本">maven命令</a></p>
 <hr>
-<p>参考连接:<br><a href="https://my.oschina.net/u/2335754/blog/476676" target="_blank" rel="noopener">https://my.oschina.net/u/2335754/blog/476676</a><br><a href="https://www.sojson.com/blog/250.html" target="_blank" rel="noopener">https://www.sojson.com/blog/250.html</a><br><a href="https://www.jianshu.com/p/43c06674024c" target="_blank" rel="noopener">https://www.jianshu.com/p/43c06674024c</a>  </p>
+<p>参考连接:<br><a href="https://my.oschina.net/u/2335754/blog/476676" target="_blank" rel="noopener">https://my.oschina.net/u/2335754/blog/476676</a><br><a href="https://www.sojson.com/blog/250.html" target="_blank" rel="noopener">https://www.sojson.com/blog/250.html</a><br><a href="https://www.jianshu.com/p/43c06674024c" target="_blank" rel="noopener">https://www.jianshu.com/p/43c06674024c</a><br><a href="https://www.xncoding.com/2018/01/27/tool/maven-central.html" target="_blank" rel="noopener">https://www.xncoding.com/2018/01/27/tool/maven-central.html</a></p>
 
           
         
@@ -842,12 +864,24 @@
                 
               
 
-              <time title="创建时间：2018-09-19 10:24:23 / 修改时间：10:25:09" itemprop="dateCreated datePublished" datetime="2018-09-19T10:24:23+08:00">2018-09-19</time>
+              <time title="创建时间：2018-09-19 10:24:23" itemprop="dateCreated datePublished" datetime="2018-09-19T10:24:23+08:00">2018-09-19</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-21 23:52:57" itemprop="dateModified" datetime="2018-09-21T23:52:57+08:00">2018-09-21</time>
               
             
           </span>
@@ -913,7 +947,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">39</span>
               
 
               
@@ -949,7 +983,7 @@
       
         
           
-            
+            <h1 id="JDK动态代理"><a href="#JDK动态代理" class="headerlink" title="JDK动态代理"></a>JDK动态代理</h1><h1 id="CGLIB-Code-Generation-Library-代理"><a href="#CGLIB-Code-Generation-Library-代理" class="headerlink" title="CGLIB(Code Generation Library)代理"></a>CGLIB(Code Generation Library)代理</h1>
           
         
       
@@ -1668,7 +1702,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-09-18 00:36:40" itemprop="dateModified" datetime="2018-09-18T00:36:40+08:00">2018-09-18</time>
+                <time title="修改时间：2018-09-21 23:52:51" itemprop="dateModified" datetime="2018-09-21T23:52:51+08:00">2018-09-21</time>
               
             
           </span>
@@ -1734,7 +1768,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">1.5k</span>
               
 
               
@@ -1773,6 +1807,23 @@
             <h1 id="github新建项目-且本地也已经新建项目了"><a href="#github新建项目-且本地也已经新建项目了" class="headerlink" title="github新建项目,且本地也已经新建项目了"></a>github新建项目,且本地也已经新建项目了</h1><h2 id="设置本地项目的远程分支地址"><a href="#设置本地项目的远程分支地址" class="headerlink" title="设置本地项目的远程分支地址"></a>设置本地项目的远程分支地址</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin git@github.com:ZuRun/tracing.git</span><br></pre></td></tr></table></figure>
 <h2 id="拉取远程仓库代码"><a href="#拉取远程仓库代码" class="headerlink" title="拉取远程仓库代码"></a>拉取远程仓库代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
 <h2 id="提交代码并push到远程分支"><a href="#提交代码并push到远程分支" class="headerlink" title="提交代码并push到远程分支"></a>提交代码并push到远程分支</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --<span class="built_in">set</span>-upstream origin master</span><br></pre></td></tr></table></figure>
+<h1 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h1><h2 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h2><ul>
+<li><p>查看配置</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看远端地址 </p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote –v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>新增远程地址</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add &lt;remote-name,一般为origin&gt; &lt;remote url&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除指定远程仓库</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rm &lt;remote-name,一般为origin&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改远程仓库url</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url &lt;remote-name,一般为origin&gt; &lt;remote url&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <h1 id="子仓库-git-submodule"><a href="#子仓库-git-submodule" class="headerlink" title="子仓库 git submodule"></a>子仓库 git submodule</h1><h2 id="添加子仓库"><a href="#添加子仓库" class="headerlink" title="添加子仓库"></a>添加子仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add &lt;仓库地址&gt; &lt;本地路径&gt;</span><br></pre></td></tr></table></figure>
 <!--mode-->
 <p>示例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add git@github.com:ZuRun/json-online.git <span class="built_in">source</span>/tools/json-online</span><br></pre></td></tr></table></figure></p>
@@ -2709,7 +2760,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">34k</span>
   
 
   
@@ -2720,7 +2771,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">31 分钟</span>
   
 </div>
 

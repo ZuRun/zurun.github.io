@@ -119,7 +119,7 @@
 <meta property="og:image" content="http://blog.zull.cn/resources/img/mvn/09163641_dfFK.png">
 <meta property="og:image" content="http://blog.zull.cn/resources/img/mvn/09163641_EBln.png">
 <meta property="og:image" content="http://blog.zull.cn/resources/img/mvn/1537538996814.jpg">
-<meta property="og:updated_time" content="2018-09-21T15:29:44.605Z">
+<meta property="og:updated_time" content="2018-09-21T17:46:39.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="发布jar包到Maven中央仓库">
 <meta name="twitter:description" content="Sonatype账号注册Sonatype账号,注册连接提交一个issues 创建issues    issues信息填写   Description 和 Attachment 不需要填写   填写关键信息    等待工单处理 找到工单   如果状态变为RESOLVED 则生效   使用gpg进行签名 下载gpg对发布的文件进行签名  gpg会生成公钥和私钥，mac下载链接，windows下载链接，">
@@ -384,12 +384,24 @@
                 
               
 
-              <time title="创建时间：2018-09-21 00:38:28 / 修改时间：23:29:44" itemprop="dateCreated datePublished" datetime="2018-09-21T00:38:28+08:00">2018-09-21</time>
+              <time title="创建时间：2018-09-21 00:38:28" itemprop="dateCreated datePublished" datetime="2018-09-21T00:38:28+08:00">2018-09-21</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-22 01:46:39" itemprop="dateModified" datetime="2018-09-22T01:46:39+08:00">2018-09-22</time>
               
             
           </span>
@@ -455,7 +467,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">1.6k</span>
+                <span title="本文字数">2k</span>
               
 
               
@@ -469,7 +481,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -522,10 +534,20 @@
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;scm&gt;</span><br><span class="line">    &lt;url&gt; https://github.com/ZuRun/tracing&lt;/url&gt;</span><br><span class="line">    &lt;connection&gt;https://github.com/ZuRun/tracing.git&lt;/connection&gt;</span><br><span class="line">    &lt;developerConnection&gt;https://github.com/ZuRun/tracing&lt;/developerConnection&gt;</span><br><span class="line">&lt;/scm&gt;</span><br><span class="line">&lt;!--mvn--&gt;</span><br><span class="line">&lt;developers&gt;</span><br><span class="line">    &lt;developer&gt;</span><br><span class="line">        &lt;name&gt;Sonatype账号&lt;/name&gt;</span><br><span class="line">        &lt;email&gt;Sonatype邮箱&lt;/email&gt;</span><br><span class="line">        &lt;url&gt;https://github.com/ZuRun/tracing&lt;/url&gt;</span><br><span class="line">    &lt;/developer&gt;</span><br><span class="line">&lt;/developers&gt;</span><br><span class="line">&lt;distributionManagement&gt;</span><br><span class="line">    &lt;snapshotRepository&gt;</span><br><span class="line">        &lt;id&gt;sonatype-nexus-snapshots&lt;/id&gt;</span><br><span class="line">        &lt;url&gt;https://oss.sonatype.org/content/repositories/snapshots&lt;/url&gt;</span><br><span class="line">    &lt;/snapshotRepository&gt;</span><br><span class="line">&lt;/distributionManagement&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h1 id="打包上传"><a href="#打包上传" class="headerlink" title="打包上传"></a>打包上传</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean deploy -X</span><br></pre></td></tr></table></figure>
+<h1 id="打包上传"><a href="#打包上传" class="headerlink" title="打包上传"></a>打包上传</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mvn clean deploy -X</span><br><span class="line"># 或者下面命令,区别自行google</span><br><span class="line">mvn clean deploy -P release</span><br></pre></td></tr></table></figure>
+<h1 id="在OSS中发布构件"><a href="#在OSS中发布构件" class="headerlink" title="在OSS中发布构件"></a>在OSS中发布构件</h1><h2 id="登陆仓库"><a href="#登陆仓库" class="headerlink" title="登陆仓库"></a>登陆<a href="https://oss.sonatype.org/" target="_blank" rel="noopener">仓库</a></h2><ol>
+<li><p>左边菜单找到’<code>Staging Repositories</code>‘</p>
+</li>
+<li><p>右边上面一点有一个输入搜索框输入你的groupid进行快速定位， 可以发现这时你的构件状态是“open”，勾选你的构件，查看校验的结果信息， 如果没有错误就可以点击刚才勾选的checkbox上面右边一点的“close”按钮，在弹出框中“confirm”，这里又需要校验一次，稍后结果会通过邮箱通知。</p>
+</li>
+<li><p>close成功后,点击refresh刷新,并点击release按钮</p>
+</li>
+<li><p>release成功后,Staging Repositories中会看不到此构件,大概等待2个小时,可以在中央仓库中搜多到构件</p>
+</li>
+</ol>
 <h1 id="日常操作"><a href="#日常操作" class="headerlink" title="日常操作"></a>日常操作</h1><h2 id="更改版本号"><a href="#更改版本号" class="headerlink" title="更改版本号"></a>更改版本号</h2><p>见 <a href="/maven/cmd#更新项目版本">maven命令</a></p>
 <hr>
-<p>参考连接:<br><a href="https://my.oschina.net/u/2335754/blog/476676" target="_blank" rel="noopener">https://my.oschina.net/u/2335754/blog/476676</a><br><a href="https://www.sojson.com/blog/250.html" target="_blank" rel="noopener">https://www.sojson.com/blog/250.html</a><br><a href="https://www.jianshu.com/p/43c06674024c" target="_blank" rel="noopener">https://www.jianshu.com/p/43c06674024c</a>  </p>
+<p>参考连接:<br><a href="https://my.oschina.net/u/2335754/blog/476676" target="_blank" rel="noopener">https://my.oschina.net/u/2335754/blog/476676</a><br><a href="https://www.sojson.com/blog/250.html" target="_blank" rel="noopener">https://www.sojson.com/blog/250.html</a><br><a href="https://www.jianshu.com/p/43c06674024c" target="_blank" rel="noopener">https://www.jianshu.com/p/43c06674024c</a><br><a href="https://www.xncoding.com/2018/01/27/tool/maven-central.html" target="_blank" rel="noopener">https://www.xncoding.com/2018/01/27/tool/maven-central.html</a></p>
 
       
     </div>
@@ -777,7 +799,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Sonatype账号"><span class="nav-number">1.</span> <span class="nav-text">Sonatype账号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册Sonatype账号-注册连接"><span class="nav-number">1.1.</span> <span class="nav-text">注册Sonatype账号,注册连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交一个issues"><span class="nav-number">1.2.</span> <span class="nav-text">提交一个issues</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等待工单处理"><span class="nav-number">1.3.</span> <span class="nav-text">等待工单处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用gpg进行签名"><span class="nav-number">2.</span> <span class="nav-text">使用gpg进行签名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置maven"><span class="nav-number">3.</span> <span class="nav-text">配置maven</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打包上传"><span class="nav-number">4.</span> <span class="nav-text">打包上传</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日常操作"><span class="nav-number">5.</span> <span class="nav-text">日常操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#更改版本号"><span class="nav-number">5.1.</span> <span class="nav-text">更改版本号</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Sonatype账号"><span class="nav-number">1.</span> <span class="nav-text">Sonatype账号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册Sonatype账号-注册连接"><span class="nav-number">1.1.</span> <span class="nav-text">注册Sonatype账号,注册连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提交一个issues"><span class="nav-number">1.2.</span> <span class="nav-text">提交一个issues</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#等待工单处理"><span class="nav-number">1.3.</span> <span class="nav-text">等待工单处理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用gpg进行签名"><span class="nav-number">2.</span> <span class="nav-text">使用gpg进行签名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置maven"><span class="nav-number">3.</span> <span class="nav-text">配置maven</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#打包上传"><span class="nav-number">4.</span> <span class="nav-text">打包上传</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#在OSS中发布构件"><span class="nav-number">5.</span> <span class="nav-text">在OSS中发布构件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#登陆仓库"><span class="nav-number">5.1.</span> <span class="nav-text">登陆仓库</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日常操作"><span class="nav-number">6.</span> <span class="nav-text">日常操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#更改版本号"><span class="nav-number">6.1.</span> <span class="nav-text">更改版本号</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -811,7 +833,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">34k</span>
   
 
   
@@ -822,7 +844,7 @@
     
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
     
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">31 分钟</span>
   
 </div>
 
