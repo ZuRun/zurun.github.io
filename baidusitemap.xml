@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://blog.zull.cn/maven/cmd/</loc>
+    <lastmod>2018-09-21T17:48:19.884Z</lastmod>
+    <data>
+        <display>
+        <title>maven</title>
+        <pubTime>2018-09-21T13:27:07.000Z</pubTime>
+        
+        <tag>maven</tag>
+         
+        <tag>tools</tag>
+         
+         
+           
+             
+              <breadCrumb title="maven" url="http://blog.zull.cn/categories/maven/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.zull.cn/maven/mvn-repository/</loc>
     <lastmod>2018-09-21T17:46:39.135Z</lastmod>
     <data>
@@ -61,28 +83,6 @@
            
              
               <breadCrumb title="tools" url="http://blog.zull.cn/categories/tools/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://blog.zull.cn/maven/cmd/</loc>
-    <lastmod>2018-09-21T15:29:40.955Z</lastmod>
-    <data>
-        <display>
-        <title>maven</title>
-        <pubTime>2018-09-21T13:27:07.000Z</pubTime>
-        
-        <tag>maven</tag>
-         
-        <tag>tools</tag>
-         
-         
-           
-             
-              <breadCrumb title="maven" url="http://blog.zull.cn/categories/maven/"/>
           
         </display>
     </data>

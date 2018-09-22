@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zull.cn/maven/cmd/</loc>
+    
+    <lastmod>2018-09-21T17:48:19.884Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zull.cn/maven/mvn-repository/</loc>
     
     <lastmod>2018-09-21T17:46:39.135Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://blog.zull.cn/git/</loc>
     
     <lastmod>2018-09-21T15:52:51.018Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.zull.cn/maven/cmd/</loc>
-    
-    <lastmod>2018-09-21T15:29:40.955Z</lastmod>
     
   </url>
   
