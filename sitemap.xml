@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.zull.cn/thread/practice/dead-lock/</loc>
+    
+    <lastmod>2018-10-05T10:24:52.355Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/java-thread-four/</loc>
+    
+    <lastmod>2018-10-03T04:45:39.749Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.zull.cn/hexo/create-hexo-theme/</loc>
+    
+    <lastmod>2018-09-23T17:06:49.871Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.zull.cn/maven/cmd/</loc>
     
     <lastmod>2018-09-21T17:48:19.884Z</lastmod>
