@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://blog.zull.cn/thread/practice/thread-pool/</loc>
+    <lastmod>2018-10-06T08:21:30.364Z</lastmod>
+    <data>
+        <display>
+        <title>thread-pool</title>
+        <pubTime>2018-10-06T08:21:08.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>thread</tag>
+         
+         
+           
+             
+              <breadCrumb title="java" url="http://blog.zull.cn/categories/java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://blog.zull.cn/thread/practice/dead-lock/</loc>
     <lastmod>2018-10-05T10:24:52.355Z</lastmod>
     <data>

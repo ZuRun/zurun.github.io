@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[thread-pool]]></title>
+    <url>%2Fthread%2Fpractice%2Fthread-pool%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>thread</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[死锁]]></title>
     <url>%2Fthread%2Fpractice%2Fdead-lock%2F</url>
     <content type="text"><![CDATA[线程1与线程2互相等待对方释放锁的情况下,会导致死锁. 示例代码: 1234567891011121314151617181920212223242526272829303132333435public class DeadLockDemo &#123; private static final String A = "A"; private static final String B = "B"; public static void main(String[] args) &#123; Thread thread1 = new Thread(() -&gt; &#123; synchronized (A) &#123; try &#123; Thread.sleep(2000L); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; synchronized (B) &#123; System.out.println("b"); &#125; &#125; &#125;, "线程1"); Thread thread2 = new Thread(() -&gt; &#123; synchronized (B) &#123; try &#123; Thread.sleep(3000L); &#125; catch (InterruptedException e) &#123; e.printStackTrace(); &#125; synchronized (A) &#123; System.out.println("a"); &#125; &#125; &#125;, "线程2"); thread1.start(); thread2.start(); &#125;&#125; 通过dump线程来查看原因 通过 jps [-l] 命令查看本机所有java进程pid 1jps -l 获取到pid jstack [-l] pid 1jstack -l 12840 找到进程信息:123456789101112131415161718&quot;线程2&quot; #11 prio=5 os_prio=31 tid=0x00007f8ea488d800 nid=0x4003 waiting for monitor entry [0x0000700003aff000] java.lang.Thread.State: BLOCKED (on object monitor) at cn.zull.study.thread.deadlock.DeadLockDemo.lambda$main$1(DeadLockDemo.java:34) - waiting to lock &lt;0x000000076ace8220&gt; (a java.lang.String) - locked &lt;0x000000076ace8250&gt; (a java.lang.String) at cn.zull.study.thread.deadlock.DeadLockDemo$$Lambda$2/443308702.run(Unknown Source) at java.lang.Thread.run(Thread.java:748) Locked ownable synchronizers: - None&quot;线程1&quot; #10 prio=5 os_prio=31 tid=0x00007f8ea488c800 nid=0x4503 waiting for monitor entry [0x00007000039fc000] java.lang.Thread.State: BLOCKED (on object monitor) at cn.zull.study.thread.deadlock.DeadLockDemo.lambda$main$0(DeadLockDemo.java:20) - waiting to lock &lt;0x000000076ace8250&gt; (a java.lang.String) - locked &lt;0x000000076ace8220&gt; (a java.lang.String) at cn.zull.study.thread.deadlock.DeadLockDemo$$Lambda$1/205797316.run(Unknown Source) at java.lang.Thread.run(Thread.java:748) 发现两个线程都处于BLOCKED阻塞状态 避免死锁的常见方法 避免一个线程同时获取多个锁. 避免一个线程在锁内占用多个资源,尽量保证每个锁只占用一个资源. 尝试使用定时锁,使用`lock.tryLock(timeout)来替代使用内部锁机制. 对于数据库锁,加锁和解锁必须在一个数据库连接里,否则会出现解锁失败的情况.]]></content>
